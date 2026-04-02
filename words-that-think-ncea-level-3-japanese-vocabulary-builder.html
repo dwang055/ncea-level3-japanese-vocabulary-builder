@@ -1,0 +1,3942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NCEA L3 Japanese · Vocabulary</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+<meta name="description" content="This vocabulary collection features the official NCEA Level 3 Japanese word list (146 entries including words, phrases, suffixes, and classifiers). Each entry follows consistent keyword formatting: kanji words appear as kanji【reading】, while hiragana-only and katakana words are shown without brackets. All example sentences use only vocabulary from the NCEA Level 1, 2, and 3 lists, with the second example maintaining at least 70% of non‑keyword words from Level 1/2 to ensure accessibility while introducing new Level 3 vocabulary. The collection includes New Zealand-specific and culturally relevant vocabulary. Collocations are selected by part of speech, and synonyms/antonyms (provided in the synonyms.json file) help learners build connections. Romaji readings use macrons (Hepburn style), and each example sentence includes a space‑separated kana reading. This resource aligns with Curriculum Level 8 of the New Zealand curriculum and is designed for students preparing for NCEA Level 3 Japanese assessments.">
+<meta name="theme-color" content="#06131a">
+<style>
+:root {
+  --bg:       #06131a;
+  --panel:    #0b1b24;
+  --panel2:   #0e2230;
+  --stroke:   #7ad0e0;
+  --text:     #e7fbff;
+  --muted:    #9fd6df;
+  --muted2:   #4a6e78;
+  --bad:      #ff5c7a;
+  --good:     #6ef7c8;
+  --gold:     #f0c040;
+  --gold2:    #ffe080;
+  --s35:      rgba(122,208,224,.35);
+  --s60:      rgba(122,208,224,.60);
+  --s20:      rgba(122,208,224,.20);
+  --o15:      rgba(0,0,0,.15);
+  --o25:      rgba(0,0,0,.25);
+  --panel-a:  rgba(11,27,36,.90);
+  --good15:   rgba(110,247,200,.15);
+  --good60:   rgba(110,247,200,.60);
+  --bad12:    rgba(255,92,122,.12);
+  --bad55:    rgba(255,92,122,.55);
+  --gold10:   rgba(240,192,64,.10);
+  --gold50:   rgba(240,192,64,.50);
+}
+*, *::before, *::after { box-sizing: border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: radial-gradient(900px 600px at 50% 0%, var(--panel2) 0%, var(--bg) 65%);
+  color: var(--text);
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+button { font-family: inherit; color: var(--text); cursor: pointer; }
+.wrapper { max-width: 680px; margin: 0 auto; padding: 0 14px; }
+.app-header {
+  text-align: center;
+  padding: 32px 10px 22px;
+  border-bottom: 1px solid var(--s20);
+}
+.app-header h1 {
+  font-family: Georgia, 'Times New Roman', 'Songti SC', serif;
+  font-size: clamp(2rem, 7vw, 2.8rem);
+  font-weight: 700;
+  color: var(--good);
+  letter-spacing: .01em;
+  text-shadow: 0 0 30px rgba(110,247,200,.25);
+  line-height: 1.15;
+}
+.app-header .tagline {
+  margin-top: 8px;
+  font-size: clamp(0.85rem, 3vw, 1rem);
+  color: var(--muted);
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+.app-header .book-credit {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: var(--muted2);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.header-star-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.header-badge {
+  background: var(--panel-a);
+  border: 1px solid var(--s35);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+.header-badge:hover { background: rgba(122,208,224,.08); border-color: var(--s60); }
+.header-badge.active { background: var(--good15); border-color: var(--good60); color: var(--good); }
+.group-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+  background: var(--panel);
+  border: 1px solid var(--s35);
+  border-radius: 16px;
+  padding: 10px 14px;
+}
+.group-nav-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+.group-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--muted2);
+  font-weight: 700;
+}
+.group-num {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--good);
+  letter-spacing: .02em;
+}
+.group-dots {
+  display: flex;
+  gap: 5px;
+  margin-top: 3px;
+}
+.group-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--muted2);
+  transition: background .2s, transform .2s;
+}
+.group-dot.active { background: var(--good); transform: scale(1.3); }
+.group-dot.done { background: var(--s60); }
+.nav-pill {
+  background: rgba(122,208,224,.08);
+  border: 1px solid var(--s35);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--muted);
+  transition: all .15s;
+  white-space: nowrap;
+}
+.nav-pill:hover:not(:disabled) { background: rgba(122,208,224,.15); border-color: var(--s60); color: var(--text); }
+.nav-pill:disabled { opacity: .35; pointer-events: none; }
+.word-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 0 2px;
+}
+.word-nav-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+}
+.word-counter {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+.word-counter span { color: var(--text); }
+.icon-btn {
+  background: rgba(122,208,224,.08);
+  border: 1px solid var(--s35);
+  border-radius: 50%;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  transition: all .15s;
+  color: var(--muted);
+}
+.icon-btn:hover { background: rgba(122,208,224,.15); border-color: var(--s60); color: var(--text); }
+.icon-btn.starred { color: var(--gold); border-color: var(--gold50); background: var(--gold10); }
+.icon-btn:disabled { opacity: .3; pointer-events: none; }
+.word-card {
+  margin-top: 10px;
+  background: linear-gradient(160deg, rgba(14,34,48,.85), rgba(11,27,36,.95));
+  border: 1px solid var(--s35);
+  border-radius: 22px;
+  overflow: hidden;
+  transition: border-color .2s;
+}
+.word-card-top {
+  padding: 20px 20px 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid var(--s20);
+}
+.word-left { display: flex; flex-direction: column; gap: 4px; }
+.word-display {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(1.7rem, 6vw, 2.2rem);
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: .02em;
+  line-height: 1;
+  text-shadow: 0 0 20px rgba(240,192,64,.2);
+}
+.pron-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pron-text {
+  font-size: 1.1rem;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: .03em;
+}
+.speak-btn {
+  background: var(--good15);
+  border: 1px solid var(--good60);
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--good);
+  transition: all .15s;
+}
+.speak-btn:hover { background: rgba(110,247,200,.25); }
+.chapter-badge {
+  background: rgba(122,208,224,.08);
+  border: 1px solid var(--s35);
+  border-radius: 8px;
+  padding: 4px 9px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+.definition-block {
+  padding: 14px 20px 16px;
+  border-bottom: 1px solid var(--s20);
+}
+.def-en {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(231,251,255,.9);
+}
+.def-zh {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-top: 4px;
+  font-weight: 500;
+}
+.sentence-tab-row {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--s20);
+}
+.sent-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted2);
+  transition: all .15s;
+  text-align: center;
+}
+.sent-tab:hover { color: var(--muted); background: rgba(122,208,224,.04); }
+.sent-tab.active {
+  color: var(--good);
+  border-bottom-color: var(--good);
+  background: rgba(110,247,200,.04);
+}
+.sentence-content {
+  padding: 18px 20px 20px;
+}
+.sent-en {
+  font-family: Georgia, 'Times New Roman', 'Songti SC', serif;
+  font-size: clamp(1.08rem, 3.5vw, 1.18rem);
+  line-height: 1.85;
+  color: rgba(231,251,255,.88);
+  font-style: italic;
+}
+.sent-zh {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-top: 12px;
+  font-weight: 400;
+  padding-top: 12px;
+  border-top: 1px solid var(--s20);
+}
+.sent-en .hl {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--gold2);
+  background: rgba(240,192,64,.08);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+.sent-source {
+  margin-top: 10px;
+  font-size: 0.7rem;
+  color: var(--muted2);
+  text-align: right;
+  letter-spacing: .04em;
+}
+.quiz-phase-label {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted2);
+  margin-bottom: 10px;
+}
+.quiz-section {
+  margin-top: 14px;
+  background: var(--panel);
+  border: 1px solid var(--s35);
+  border-radius: 18px;
+  overflow: hidden;
+}
+.quiz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  cursor: pointer;
+  user-select: none;
+  transition: background .15s;
+}
+.quiz-header:hover { background: rgba(122,208,224,.05); }
+.quiz-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.quiz-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--text);
+}
+.quiz-subtitle {
+  font-size: 0.75rem;
+  color: var(--muted2);
+  margin-top: 1px;
+}
+.quiz-score-badge {
+  background: var(--good15);
+  border: 1px solid var(--good60);
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--good);
+  display: none;
+}
+.quiz-toggle-icon { font-size: 0.85rem; color: var(--muted2); transition: transform .2s; }
+.quiz-toggle-icon.open { transform: rotate(180deg); }
+.quiz-body {
+  display: none;
+  padding: 0 18px 18px;
+  border-top: 1px solid var(--s20);
+}
+.quiz-body.open { display: block; }
+.quiz-progress-bar {
+  height: 4px;
+  background: rgba(122,208,224,.12);
+  border-radius: 999px;
+  margin: 14px 0 16px;
+  overflow: hidden;
+}
+.quiz-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--good), #4edfc9);
+  border-radius: 999px;
+  transition: width .3s ease;
+}
+.quiz-q-num {
+  font-size: 0.75rem;
+  color: var(--muted2);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 10px;
+}
+.quiz-sentence {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(1.05rem, 3vw, 1.15rem);
+  line-height: 1.8;
+  color: rgba(231,251,255,.9);
+  background: rgba(122,208,224,.05);
+  border: 1px solid var(--s20);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+.blank { color: var(--gold); font-style: normal; font-weight: 700; letter-spacing: .1em; }
+.quiz-choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.choice-btn {
+  background: rgba(122,208,224,.06);
+  border: 1px solid var(--s35);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  text-align: left;
+  transition: all .15s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.choice-btn:hover:not(:disabled) { background: rgba(122,208,224,.12); border-color: var(--s60); }
+.choice-btn .choice-label {
+  background: var(--s35);
+  border-radius: 4px;
+  width: 20px; height: 20px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+.choice-btn.correct { background: var(--good15); border-color: var(--good60); color: var(--good); }
+.choice-btn.wrong   { background: var(--bad12);  border-color: var(--bad55);  color: var(--bad); }
+.choice-btn:disabled { pointer-events: none; opacity: .7; }
+.quiz-feedback {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: none;
+}
+.quiz-feedback.correct-fb { background: var(--good15); color: var(--good); border: 1px solid var(--good60); }
+.quiz-feedback.wrong-fb   { background: var(--bad12);  color: var(--bad);  border: 1px solid var(--bad55); }
+.quiz-next-btn {
+  background: rgba(122,208,224,.1);
+  border: 1px solid var(--s60);
+  border-radius: 999px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text);
+  display: none;
+  transition: background .15s;
+}
+.quiz-next-btn:hover { background: rgba(122,208,224,.18); }
+.quiz-result {
+  display: none;
+  text-align: center;
+  padding: 16px 0 4px;
+}
+.quiz-result-score {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--good);
+  line-height: 1;
+}
+.quiz-result-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 4px;
+  margin-bottom: 14px;
+}
+.quiz-result-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.quiz-retry-btn {
+  background: var(--good15);
+  border: 1px solid var(--good60);
+  border-radius: 999px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--good);
+  transition: background .15s;
+}
+.quiz-retry-btn:hover { background: rgba(110,247,200,.25); }
+.quiz-start-area {
+  padding: 16px 0 4px;
+  text-align: center;
+}
+.quiz-start-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+.quiz-start-btn {
+  background: var(--good15);
+  border: 1px solid var(--good60);
+  border-radius: 999px;
+  padding: 10px 28px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--good);
+  transition: background .15s;
+}
+.quiz-start-btn:hover { background: rgba(110,247,200,.25); }
+.quiz-skip-btn {
+  background: none;
+  border: none;
+  color: var(--muted2);
+  font-size: 0.78rem;
+  margin-left: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.starred-section {
+  margin-top: 14px;
+  background: var(--panel);
+  border: 1px solid var(--s35);
+  border-radius: 18px;
+  overflow: hidden;
+}
+.starred-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  cursor: pointer;
+  user-select: none;
+  transition: background .15s;
+}
+.starred-header:hover { background: rgba(240,192,64,.04); }
+.starred-header-left { display: flex; align-items: center; gap: 10px; }
+.starred-title { font-size: 0.9rem; font-weight: 800; color: var(--text); }
+.starred-count {
+  background: var(--gold10);
+  border: 1px solid var(--gold50);
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.starred-body { display: none; padding: 0 18px 18px; border-top: 1px solid var(--s20); }
+.starred-body.open { display: block; }
+.starred-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 14px;
+}
+.starred-chip {
+  background: var(--gold10);
+  border: 1px solid var(--gold50);
+  border-radius: 999px;
+  padding: 5px 13px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--gold);
+  cursor: pointer;
+  transition: all .15s;
+}
+.starred-chip:hover { background: rgba(240,192,64,.18); }
+.starred-empty {
+  padding-top: 14px;
+  font-size: 0.85rem;
+  color: var(--muted2);
+  font-style: italic;
+  text-align: center;
+}
+.my-sentences-block {
+  padding: 16px 20px 18px;
+  border-top: 1px solid var(--s20);
+}
+.my-sent-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.my-sent-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--muted);
+  letter-spacing: .02em;
+}
+.my-sent-counter {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted2);
+  background: var(--o25);
+  border: 1px solid var(--s20);
+  border-radius: 999px;
+  padding: 2px 9px;
+}
+.my-sent-counter.full { color: var(--gold); border-color: var(--gold50); background: var(--gold10); }
+.my-sent-input-row {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+.my-sent-input {
+  flex: 1;
+  background: rgba(122,208,224,.06);
+  border: 1px solid var(--s35);
+  border-radius: 12px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.88rem;
+  padding: 9px 13px;
+  outline: none;
+  transition: border-color .15s;
+  min-width: 0;
+}
+.my-sent-input:focus { border-color: var(--s60); background: rgba(122,208,224,.09); }
+.my-sent-input::placeholder { color: var(--muted2); }
+.my-sent-save-btn {
+  background: rgba(122,208,224,.1);
+  border: 1px solid var(--s60);
+  border-radius: 12px;
+  padding: 9px 16px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--stroke);
+  white-space: nowrap;
+  transition: background .15s;
+  flex-shrink: 0;
+}
+.my-sent-save-btn:hover { background: rgba(122,208,224,.2); }
+.my-sent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 10px;
+}
+.my-sent-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: rgba(122,208,224,.05);
+  border: 1px solid var(--s20);
+  border-radius: 10px;
+  padding: 9px 12px;
+}
+.my-sent-num {
+  font-size: 0.68rem;
+  font-weight: 900;
+  color: var(--muted2);
+  background: var(--s20);
+  border-radius: 4px;
+  padding: 2px 6px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.my-sent-text {
+  flex: 1;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(231,251,255,.85);
+}
+.my-sent-del {
+  background: none;
+  border: none;
+  color: var(--muted2);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0 3px;
+  flex-shrink: 0;
+  opacity: .6;
+  transition: color .15s, opacity .15s;
+}
+.my-sent-del:hover { color: var(--bad); opacity: 1; }
+.starred-quiz-divider {
+  height: 1px;
+  background: var(--s20);
+  margin: 14px 0;
+}
+.sq-start-area { text-align: center; padding-bottom: 4px; }
+.sq-desc {
+  font-size: 0.82rem;
+  color: var(--muted2);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.sq-unlock-hint {
+  font-size: 0.75rem;
+  color: var(--muted2);
+  font-style: italic;
+}
+footer {
+  margin-top: 36px;
+  padding: 20px 14px 28px;
+  border-top: 1px solid var(--s20);
+  text-align: center;
+}
+.footer-author {
+  font-size: 0.8rem;
+  color: var(--muted2);
+  line-height: 1.9;
+}
+.footer-author a { color: var(--muted); text-decoration: none; }
+.footer-author a:hover { color: var(--stroke); }
+.footer-quote {
+  margin-top: 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--muted2);
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+#toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(11,27,36,.96);
+  border: 1px solid var(--s60);
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s, transform .2s;
+  white-space: nowrap;
+  z-index: 9999;
+}
+#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+#toast.gold { border-color: var(--gold50); color: var(--gold); }
+#toast.good { border-color: var(--good60); color: var(--good); }
+@media (max-width: 480px) {
+  .word-card-top { flex-wrap: wrap; }
+  .quiz-choices { grid-template-columns: 1fr; }
+  .group-dots { display: none; }
+  .nav-pill { padding: 7px 12px; font-size: 0.8rem; }
+}
+.synan-block {
+  padding: 10px 20px 14px;
+  border-bottom: 1px solid var(--s20);
+  display: flex; gap: 14px; flex-wrap: wrap;
+}
+.synan-group { flex: 1; min-width: 0; }
+.synan-label {
+  font-size: 0.65rem; font-weight: 900; text-transform: uppercase;
+  letter-spacing: .1em; margin-bottom: 5px;
+}
+.synan-label.syn { color: var(--good); }
+.synan-label.ant { color: var(--bad); }
+.synan-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.synan-chip {
+  font-size: 0.75rem; font-weight: 600; padding: 3px 9px;
+  border-radius: 999px;
+}
+.synan-chip.syn { background: rgba(110,247,200,.1); border: 1px solid rgba(110,247,200,.35); color: var(--good); }
+.synan-chip.ant { background: rgba(255,92,122,.08); border: 1px solid rgba(255,92,122,.3);  color: var(--bad); }
+.spell-content { padding: 18px 20px 22px; }
+.spell-sentence {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(1.08rem, 3.5vw, 1.18rem);
+  line-height: 1.85;
+  color: rgba(231,251,255,.88);
+  margin-bottom: 18px;
+}
+.spell-sentence .hl { font-style: normal; font-weight: 700; color: var(--gold2); }
+.spell-boxes {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  justify-content: center; margin-bottom: 18px;
+}
+.spell-box {
+  width: 40px; height: 46px;
+  border: 2px solid var(--s35);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; font-weight: 800; text-transform: lowercase;
+  background: rgba(122,208,224,.05);
+  transition: border-color .15s, background .15s;
+  flex-shrink: 0;
+}
+.spell-box.filled   { border-color: var(--s60); background: rgba(122,208,224,.1); color: var(--text); }
+.spell-box.correct  { border-color: var(--good); background: rgba(110,247,200,.15); color: var(--good); }
+.spell-box.wrong    { border-color: var(--bad);  background: rgba(255,92,122,.12);  color: var(--bad); }
+.spell-box.cursor   { border-color: var(--gold); animation: spell-blink .9s ease infinite; }
+@keyframes spell-blink { 0%,100% { border-color: var(--gold); } 50% { border-color: transparent; } }
+.spell-input-row {
+  display: flex; gap: 8px; align-items: center; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.spell-input {
+  background: rgba(122,208,224,.06); border: 1px solid var(--s35);
+  border-radius: 12px; color: var(--text); font-family: inherit;
+  font-size: 1rem; font-weight: 700; padding: 9px 14px; outline: none;
+  width: 180px; text-align: center; letter-spacing: .12em;
+  transition: border-color .15s;
+}
+.spell-input:focus { border-color: var(--s60); }
+.spell-input::placeholder { color: var(--muted2); font-weight: 400; letter-spacing: 0; }
+.spell-check-btn {
+  background: var(--good15); border: 1px solid var(--good60);
+  border-radius: 12px; padding: 9px 18px;
+  font-size: .88rem; font-weight: 800; color: var(--good);
+  transition: background .15s;
+}
+.spell-check-btn:hover { background: rgba(110,247,200,.25); }
+.spell-reveal-btn {
+  background: none; border: none; color: var(--muted2);
+  font-size: .78rem; text-decoration: underline; cursor: pointer;
+  display: block; text-align: center; margin-top: 4px;
+}
+.spell-feedback {
+  text-align: center; font-size: .9rem; font-weight: 800;
+  padding: 10px; border-radius: 10px; margin-top: 4px; display: none;
+}
+.spell-feedback.ok  { background: var(--good15); color: var(--good); border: 1px solid var(--good60); }
+.spell-feedback.err { background: var(--bad12);  color: var(--bad);  border: 1px solid var(--bad55); }
+.spell-hint-row { text-align: center; margin-bottom: 10px; }
+.spell-hint-text { font-size: .78rem; color: var(--muted2); font-style: italic; }
+
+/* ── Print button ─────────────────────────────────────── */
+.print-btn { margin-left: 8px; }
+.header-star-row { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px; }
+
+/* ── Print styles ─────────────────────────────────────── */
+@media print {
+  body * { visibility: hidden; }
+  #printContainer, #printContainer * { visibility: visible; }
+  #printContainer { display: block !important; position: absolute; inset: 0; background: white; }
+}
+
+
+.flashcard-container {
+  display: none;
+  padding: 20px;
+  text-align: center;
+}
+.flashcard-container.active {
+  display: block;
+}
+.flashcard-flip {
+  perspective: 1000px;
+  margin-bottom: 24px;
+}
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  background: linear-gradient(160deg, rgba(14,34,48,.85), rgba(11,27,36,.95));
+  border: 1px solid rgba(122,208,224,.3);
+  border-radius: 18px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .3s ease;
+  transform-style: preserve-3d;
+}
+.flashcard-inner:hover {
+  border-color: rgba(122,208,224,.6);
+  background: linear-gradient(160deg, rgba(14,34,48,.9), rgba(11,27,36,1));
+}
+.flashcard-label {
+  font-size: 0.72rem;
+  color: var(--muted2);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.flashcard-content {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--good);
+  line-height: 1.6;
+  text-shadow: 0 0 20px rgba(110,247,200,.15);
+}
+.flashcard-word-main {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--good);
+  margin-bottom: 8px;
+  text-shadow: 0 0 20px rgba(110,247,200,.15);
+}
+.flashcard-pron {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 500;
+  font-style: italic;
+  margin: 6px 0;
+}
+.flashcard-pos-display {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #6ef7c8;
+  background: rgba(110, 247, 200, 0.1);
+  border: 1px solid rgba(110, 247, 200, 0.3);
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: 6px 0;
+  min-height: 20px;
+}
+.flashcard-hear {
+  background: var(--good15);
+  border: 1px solid var(--good60);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--good);
+  cursor: pointer;
+  transition: all .15s;
+  margin-left: 8px;
+  display: inline-block;
+}
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(110, 247, 200, 0.15);
+  border: 1px solid rgba(110, 247, 200, 0.4);
+  color: #6ef7c8;
+  margin: 0 4px;
+}
+.badge-pos {
+  display: inline-block !important;
+  background: rgba(110, 247, 200, 0.15) !important;
+  border: 1px solid rgba(110, 247, 200, 0.4) !important;
+  color: #6ef7c8 !important;
+  padding: 4px 10px !important;
+  border-radius: 999px !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  margin: 0 4px !important;
+}
+.flashcard-hear:hover {
+  background: var(--good25);
+  border-color: var(--good);
+}
+.flashcard-pos {
+  display: inline-block;
+  background: rgba(122,208,224,.15);
+  border: 1px solid rgba(122,208,224,.4);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted);
+  margin-right: 8px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.flashcard-def-en {
+  font-size: 1.1rem;
+  color: rgba(231,251,255,.9);
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+.flashcard-def-zh {
+  font-size: 1.05rem;
+  color: var(--muted);
+  font-weight: 500;
+  line-height: 1.7;
+}
+.flashcard-hint {
+  font-size: 0.75rem;
+  color: var(--muted2);
+  margin-top: 12px;
+  font-style: italic;
+}
+.flashcard-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.flashcard-progress {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 700;
+  min-width: 60px;
+}
+.flashcard-btn {
+  background: rgba(122,208,224,.1);
+  border: 1px solid var(--s60);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text);
+  cursor: pointer;
+  transition: all .15s;
+}
+.flashcard-btn:hover:not(:disabled) {
+  background: rgba(122,208,224,.2);
+  border-color: var(--s60);
+}
+.flashcard-btn:disabled {
+  opacity: .35;
+  cursor: not-allowed;
+}
+
+</style>
+</head>
+<body>
+
+<div id="toast"></div>
+
+<div class="wrapper">
+  <div class="app-header">
+    <h1>NCEA Level 3 Japanese Vocabulary Builder</h1>
+    <div class="tagline">Master NCEA Level 3 Japanese — Essential words for New Zealand students</div>
+    <div class="book-credit">132 words &middot; 132 sentences &middot; Japanese Vocabulary Builder Project's NCEA Level 3 Japanese Vocabulary Builder</div>
+    <div class="header-star-row">
+      <button class="header-badge" id="starredToggleBtn">⭐ Starred Words (<span id="starredCountHeader">0</span>)</button>
+      <button class="header-badge print-btn" id="printBtn" onclick="openPrintModal()">🖨️ Print</button>
+    </div>
+  </div>
+
+  <div class="group-nav">
+    <button class="nav-pill" id="prevGroupBtn">← Prev</button>
+    <div class="group-nav-center">
+      <div class="group-label">Group</div>
+      <div class="group-num" id="groupNumDisplay">1 / 10</div>
+      <div class="group-dots" id="groupDots"></div>
+    </div>
+    <button class="nav-pill" id="nextGroupBtn">Next →</button>
+  </div>
+
+  <div class="word-nav">
+    <button class="nav-pill" id="prevWordBtn">←</button>
+    <div class="word-nav-center">
+      <div class="word-counter">Word <span id="wordNumDisplay">1</span> / <span id="groupSizeDisplay">10</span></div>
+      <button class="icon-btn" id="starBtn" title="Star this word">☆</button>
+      <button class="icon-btn" id="speakBtn" title="Hear pronunciation">🔊</button>
+    </div>
+    <button class="nav-pill" id="nextWordBtn">Next →</button>
+  </div>
+
+  <div class="word-card" id="wordCard">
+    <div class="word-card-top">
+      <div class="word-left">
+        <div class="word-display" id="wordDisplay">—</div>
+        <div class="pron-row">
+          <span class="pron-text" id="pronDisplay">—</span>
+          <button class="speak-btn" id="speakBtn2">🔊 Hear it</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="definition-block">
+      <div class="def-en" id="defEn">—</div>
+      <div class="def-zh" id="defZh">—</div>
+    </div>
+
+    <div class="synan-block" id="synanBlock">
+      <div class="synan-group">
+        <div class="synan-label syn">Synonyms</div>
+        <div class="synan-chips" id="synChips"></div>
+      </div>
+      <div class="synan-group">
+        <div class="synan-label ant">Antonyms</div>
+        <div class="synan-chips" id="antChips"></div>
+      </div>
+    </div>
+
+    <div class="sentence-tab-row">
+      <button class="sent-tab active" id="tabNovel">📖 Source Sentence</button>
+      <button class="sent-tab" id="tabAI">💡 Example</button>
+      <button class="sent-tab" id="tabFlashcard">📇 Flashcard</button>
+    </div>
+
+    <div class="sentence-content" id="sentenceContent">
+      <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
+        <div class="sent-en" id="sentEn" style="flex: 1;">—</div>
+        <button id="sentenceHearBtn" style="flex-shrink: 0; padding: 8px 14px; background: rgba(122,208,224,.12); border: 1.5px solid rgba(122,208,224,.4); border-radius: 8px; color: #7AD0E0; cursor: pointer; font-weight: 600; white-space: nowrap; font-size: 0.85rem;" onclick="try{const e=document.getElementById('sentEn');if(e&&e.textContent&&e.textContent.trim()!=='—'){let t=e.textContent.replace(/<[^>]*>/g,'');if(t.trim())speak(t);}}catch(err){console.log('Click error:',err);}">🔊 Hear</button>
+      </div>
+      <div class="sent-zh" id="sentZh">—</div>
+      <div class="sent-source" id="sentSource">—</div>
+    </div>
+
+    <div class="flashcard-container" id="flashcardContainer">
+      <div class="flashcard-nav">
+        <button class="flashcard-btn" id="flashPrevBtn" title="Previous card">← Prev</button>
+        <div class="flashcard-progress" id="flashProgress">1 / 10</div>
+        <button class="flashcard-btn" id="flashNextBtn" title="Next card">Next →</button>
+      </div>
+      <div class="flashcard-flip" id="flashFlip">
+        <div class="flashcard-inner" id="flashInner" onclick="toggleFlashcard()">
+          <div class="flashcard-label" id="flashLabel">Word</div>
+          <div class="flashcard-content" id="flashContent">—</div>
+          <div class="flashcard-hint">Tap to reveal</div>
+        </div>
+      </div>
+      <button class="icon-btn" id="flashStarBtn" title="Star this word" style="margin-bottom: 14px;">⭐</button>
+    </div>
+
+    <div class="my-sentences-block">
+      <div class="my-sent-header">
+        <span class="my-sent-title">✍️ My Sentences</span>
+        <span class="my-sent-counter" id="mySentCounter">0 / 3</span>
+      </div>
+      <div class="my-sent-input-row">
+        <input type="text" class="my-sent-input" id="mySentInput"
+          placeholder="Write your own sentence using this word…"
+          autocomplete="off" autocorrect="off" spellcheck="false">
+        <button class="my-sent-save-btn" id="mySentSaveBtn">Save</button>
+      </div>
+      <div class="my-sent-list" id="mySentList"></div>
+    </div>
+  </div>
+
+  <div class="quiz-section" id="quizSection">
+    <div class="quiz-header" id="quizHeader">
+      <div class="quiz-header-left">
+        <div>
+          <div class="quiz-title">📝 Group Quiz</div>
+          <div class="quiz-subtitle" id="quizSubtitle">Part 1: Choose · Part 2: Spell</div>
+        </div>
+        <div class="quiz-score-badge" id="quizScoreBadge">—</div>
+      </div>
+      <div>
+        <span class="quiz-toggle-icon" id="quizToggleIcon">▾</span>
+      </div>
+    </div>
+    <div class="quiz-body" id="quizBody">
+      <div class="quiz-start-area" id="quizStartArea">
+        <div class="quiz-start-desc" id="quizStartDesc">Test yourself on Group 1. Fill in the blanks using words from this group.</div>
+        <button class="quiz-start-btn" id="quizStartBtn">Start Quiz</button>
+        <button class="quiz-skip-btn" id="quizSkipBtn">Skip</button>
+      </div>
+      <div id="quizQuestionArea" style="display:none;">
+        <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgressFill"></div></div>
+        <div class="quiz-q-num" id="quizQNum">Question 1 / 10</div>
+
+        <div id="quizPhase1">
+          <div class="quiz-phase-label">📖 Choose the word — Orwell's sentence</div>
+          <div class="quiz-sentence" id="quizSentence">—</div>
+          <div class="quiz-choices" id="quizChoices"></div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>
+
+        <div id="quizPhase2" style="display:none;">
+          <div class="quiz-phase-label">💡 Spell the word — AI example sentence</div>
+          <div class="quiz-sentence" id="qSpellSentence">—</div>
+          <div class="spell-boxes" id="qSpellBoxes"></div>
+          <div class="spell-input-row">
+            <input type="text" class="spell-input" id="qSpellInput"
+              placeholder="type the word…"
+              autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <button class="spell-check-btn" id="qSpellCheckBtn">Check</button>
+          </div>
+          <button class="spell-reveal-btn" id="qSpellRevealBtn">Show answer</button>
+          <div class="quiz-feedback" id="qSpellFeedback"></div>
+        </div>
+
+        <button class="quiz-next-btn" id="quizNextBtn" style="display:none;">Next →</button>
+      </div>
+      <div class="quiz-result" id="quizResult">
+        <div class="quiz-result-score" id="quizResultScore">—</div>
+        <div class="quiz-result-label" id="quizResultLabel">—</div>
+        <div class="quiz-result-btns">
+          <button class="quiz-retry-btn" id="quizRetryBtn">↻ Retry Quiz</button>
+          <button class="quiz-skip-btn" id="quizCloseBtn">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="starred-section" id="starredSection">
+    <div class="starred-header" id="starredHeader">
+      <div class="starred-header-left">
+        <div class="starred-title">⭐ Starred Words</div>
+        <div class="starred-count" id="starredCount">0</div>
+      </div>
+      <span class="quiz-toggle-icon" id="starredToggleIcon">▾</span>
+    </div>
+    <div class="starred-body" id="starredBody">
+      <div class="starred-list" id="starredList"></div>
+
+      <div class="starred-quiz-wrap" id="starredQuizWrap">
+        <div class="starred-quiz-divider"></div>
+        <div class="sq-start-area" id="sqStartArea">
+          <div class="sq-desc" id="sqDesc">Star 5 or more words to unlock your personal quiz.</div>
+          <button class="quiz-start-btn" id="sqStartBtn" style="display:none;">⭐ Quiz My Starred Words</button>
+          <div class="sq-unlock-hint" id="sqUnlockHint">(<span id="sqStarredCount">0</span> / 5 starred so far)</div>
+        </div>
+        <div id="sqQuestionArea" style="display:none;">
+          <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="sqProgressFill"></div></div>
+          <div class="quiz-q-num" id="sqQNum">Question 1 / ?</div>
+          <div class="quiz-sentence" id="sqSentence">—</div>
+          <div class="quiz-choices" id="sqChoices"></div>
+          <div class="quiz-feedback" id="sqFeedback"></div>
+          <button class="quiz-next-btn" id="sqNextBtn">Next →</button>
+        </div>
+        <div class="quiz-result" id="sqResult" style="display:none;">
+          <div class="quiz-result-score" id="sqResultScore">—</div>
+          <div class="quiz-result-label" id="sqResultLabel">—</div>
+          <div class="quiz-result-btns">
+            <button class="quiz-retry-btn" id="sqRetryBtn">↻ Retry</button>
+            <button class="quiz-skip-btn" id="sqResetBtn">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-author">Created by Daniel Wang (dwang055@gmail.com) for NCEA Level 3 Japanese · Based on official 2025 vocabulary list · For educational use · © 2026</div>
+    <div class="footer-quote">“継続は力なり。 (Keizoku wa chikara nari.)”<br>Japanese proverb — 'Persistence leads to power.'</div>
+  </footer>
+</div>
+
+<script>
+// ============================================================
+// PASTE YOUR COMPLETE VOCAB ARRAY HERE (ALL 100 WORDS)
+// ============================================================
+// ============================================================
+const BOOK_CONFIG = {
+  "title": "NCEA Level 3 Japanese Vocabulary Builder",
+  "bookName": "NCEA Level 3 Japanese Vocabulary Builder",
+  "author": "Japanese Vocabulary Builder Project",
+  "year": "2026",
+  "tagline": "Master NCEA Level 3 Japanese — Essential words for New Zealand students"
+};
+const VOCAB = [
+  {
+    "word": "アイデンティティ",
+    "pron": "aidentiti",
+    "def_en": "identity",
+    "def_zh": "アイデンティティを見つける；アイデンティティを確立する；アイデンティティが揺らぐ",
+    "quote_en": "自分のアイデンティティは大切です。 じぶんの あいでんてぃてぃは たいせつです。",
+    "quote_zh": "Your identity is important.",
+    "ex_en": "移民として新しい国で生活するとき、自分のアイデンティティについて考えることが大切だと思います。 いみんとして あたらしい くにで せいかつするとき、じぶんの あいでんてぃてぃに ついて かんがえることが たいせつだと おもいます。",
+    "ex_zh": "When living in a new country as an immigrant, I think it's important to think about your identity.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "アウトドア",
+    "pron": "autodoa",
+    "def_en": "outdoors; outdoor recreation",
+    "def_zh": "アウトドアが好き；アウトドア活動；アウトドア用品",
+    "quote_en": "私はアウトドアが好きです。 わたしは あうとどあが すきです。",
+    "quote_zh": "I like the outdoors.",
+    "ex_en": "週末はよくアウトドアで子供たちと遊びます。 しゅうまつは よく あうとどあで こどもたちと あそびます。",
+    "ex_zh": "On weekends I often play with children outdoors.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "上がる【あがる】",
+    "pron": "agaru",
+    "def_en": "to rise",
+    "def_zh": "値段が上がる；階段を上がる；成績が上がる",
+    "quote_en": "エレベーターで三階に上がりました。 えれべーたーで さんかいに あがりました。",
+    "quote_zh": "I went up to the third floor by elevator.",
+    "ex_en": "最近、値段が上がって、生活が大変になっています。 さいきん、ねだんが あがって、せいかつが たいへんに なっています。",
+    "ex_zh": "Recently prices have risen, making life difficult.",
+    "part_of_speech": "v. (u-verb)"
+  },
+  {
+    "word": "案内する【あんないする】",
+    "pron": "annai suru",
+    "def_en": "to guide",
+    "def_zh": "観光客を案内する；町を案内する；案内してもらう",
+    "quote_en": "友達が町を案内してくれました。 ともだちが まちを あんないしてくれました。",
+    "quote_zh": "My friend showed me around town.",
+    "ex_en": "友達が学校を案内しながら、いろいろ説明してくれました。 ともだちが がっこうを あんないしながら、いろいろ せつめいしてくれました。",
+    "ex_zh": "My friend showed me around the school while explaining various things.",
+    "part_of_speech": "v. (suru)"
+  },
+  {
+    "word": "意見【いけん】",
+    "pron": "iken",
+    "def_en": "opinion",
+    "def_zh": "意見を言う；意見が違う；意見を聞く",
+    "quote_en": "自分の意見をはっきり言いました。 じぶんの いけんを はっきり いいました。",
+    "quote_zh": "I stated my opinion clearly.",
+    "ex_en": "クラスで日本の文化について意見を言いました。 くらすで にほんの ぶんかに ついて いけんを いいました。",
+    "ex_zh": "I gave my opinion about Japanese culture in class.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "一日中【いちにちじゅう】",
+    "pron": "ichinichijū",
+    "def_en": "all day",
+    "def_zh": "一日中雨が降る；一日中働く；一日中勉強する",
+    "quote_en": "昨日は一日中家にいました。 きのうは いちにちじゅう いえに いました。",
+    "quote_zh": "I stayed home all day yesterday.",
+    "ex_en": "試験の前日、一日中勉強しました。 しけんの ぜんじつ、いちにちじゅう べんきょうしました。",
+    "ex_zh": "The day before the exam, I studied all day.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "いつか",
+    "pron": "itsuka",
+    "def_en": "someday",
+    "def_zh": "いつか行く；いつか会える；いつか来る",
+    "quote_en": "いつか日本に行きたいです。 いつか にほんに いきたいです。",
+    "quote_zh": "I want to go to Japan someday.",
+    "ex_en": "彼はいつか自分の会社を作りたいと言っていました。 かれは いつか じぶんの かいしゃを つくりたいと いっていました。",
+    "ex_zh": "He said he wants to start his own company someday.",
+    "part_of_speech": "adverb"
+  },
+  {
+    "word": "いつでも",
+    "pron": "itsudemo",
+    "def_en": "any time",
+    "def_zh": "いつでもどうぞ；いつでも来てください；いつでも連絡して",
+    "quote_en": "何かあったらいつでも言ってください。 なにか あったら いつでも いってください。",
+    "quote_zh": "If anything happens, please tell me anytime.",
+    "ex_en": "このカフェはいつでも静かで、勉強にいいです。 この カフェは いつでも しずかで、べんきょうに いいです。",
+    "ex_zh": "This café is quiet any time, and it's good for studying.",
+    "part_of_speech": "adverb"
+  },
+  {
+    "word": "移民【いみん】",
+    "pron": "imin",
+    "def_en": "immigrant",
+    "def_zh": "移民が増える；移民を受け入れる；移民政策",
+    "quote_en": "ニュージーランドには多くの移民がいます。 にゅーじーらんどには おおくの いみんが います。",
+    "quote_zh": "There are many immigrants in New Zealand.",
+    "ex_en": "移民として新しい国に住むとき、言葉の問題に困ることがあります。 いみんとして あたらしい くにに すむとき、ことばの もんだいに こまることが あります。",
+    "ex_zh": "When living in a new country as an immigrant, you sometimes have trouble with language issues.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "インフルエンサー",
+    "pron": "infuruensā",
+    "def_en": "influencer",
+    "def_zh": "人気のインフルエンサー；インフルエンサーになる；インフルエンサーをフォローする",
+    "quote_en": "彼は有名なインフルエンサーです。 かれは ゆうめいな いんふるえんさーです。",
+    "quote_zh": "He is a famous influencer.",
+    "ex_en": "多くの若い人がインフルエンサーの意見に影響を受けています。 おおくの わかい ひとが いんふるえんさーの いけんに えいきょうを うけています。",
+    "ex_zh": "Many young people are influenced by influencers' opinions.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "植える【うえる】",
+    "pron": "ueru",
+    "def_en": "to plant",
+    "def_zh": "木を植える；花を植える；植え方",
+    "quote_en": "庭に桜の木を植えました。 にわに さくらの きを うえました。",
+    "quote_zh": "I planted a cherry tree in the garden.",
+    "ex_en": "環境のために、町のボランティアが公園に花を植えました。 かんきょうのために、まちの ぼらんてぃあが こうえんに はなを うえました。",
+    "ex_zh": "For the environment, town volunteers planted flowers in the park.",
+    "part_of_speech": "v. (ru-verb)"
+  },
+  {
+    "word": "影響【えいきょう】",
+    "pron": "eikyō",
+    "def_en": "influence",
+    "def_zh": "影響を与える；影響を受ける；大きい影響",
+    "quote_en": "両親の影響で音楽を始めました。 りょうしんの えいきょうで おんがくを はじめました。",
+    "quote_zh": "I started music because of my parents' influence.",
+    "ex_en": "インターネットは若者の生活に大きな影響を与えています。 いんたーねっとは わかものの せいかつに おおきな えいきょうを あたえています。",
+    "ex_zh": "The internet has a big influence on young people's lives.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "影響する【えいきょうする】",
+    "pron": "eikyō suru",
+    "def_en": "to have an influence/impact on",
+    "def_zh": "経済に影響する；健康に影響する；影響する要因",
+    "quote_en": "台風が交通に影響しました。 たいふうが こうつうに えいきょうしました。",
+    "quote_zh": "The typhoon affected transportation.",
+    "ex_en": "新しい法律が会社の働き方に大きく影響しました。 あたらしい ほうりつが かいしゃの はたらきかたに おおきく えいきょうしました。",
+    "ex_zh": "The new law greatly affected how companies work.",
+    "part_of_speech": "v. (suru)"
+  },
+  {
+    "word": "エコ【エコ(な)】",
+    "pron": "eko (na)",
+    "def_en": "eco; ecological",
+    "def_zh": "エコな生活；エコバッグ；エコ活動",
+    "quote_en": "私はエコな製品を選んでいます。 わたしは えこな せいひんを えらんでいます。",
+    "quote_zh": "I choose eco-friendly products.",
+    "ex_en": "エコな生活をするために、毎日リサイクルをしています。 えこな せいかつを するために、まいにち りさいくるを しています。",
+    "ex_zh": "To live an eco-friendly life, I recycle every day.",
+    "part_of_speech": "na-adj."
+  },
+  {
+    "word": "音【おと】",
+    "pron": "oto",
+    "def_en": "sound; noise",
+    "def_zh": "音が大きい；音を聞く；車の音",
+    "quote_en": "窓の外から音が聞こえます。 まどの そとから おとが きこえます。",
+    "quote_zh": "I can hear a sound from outside the window.",
+    "ex_en": "夜中に大きな音がして、びっくりしました。 よなかに おおきな おとが して、びっくりしました。",
+    "ex_zh": "There was a loud noise in the middle of the night, and I was surprised.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "おとしより",
+    "pron": "otoshiyori",
+    "def_en": "elderly person",
+    "def_zh": "おとしよりに優しい；おとしよりが増える；おとしよりを助ける",
+    "quote_en": "バスでおとしよりに席を譲りました。 ばすで おとしよりに せきを ゆずりました。",
+    "quote_zh": "I gave up my seat to an elderly person on the bus.",
+    "ex_en": "この町ではおとしよりが一人で住むための支援があります。 この まちでは おとしよりが ひとりで すむための しえんが あります。",
+    "ex_zh": "In this town, there is support for elderly people living alone.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "思いやり【おもいやり】",
+    "pron": "omoiyari",
+    "def_en": "empathy; consideration",
+    "def_zh": "思いやりがある；思いやりを示す；思いやりの心",
+    "quote_en": "友達の気持ちを考える思いやりが大切です。 ともだちの きもちを かんがえる おもいやりが たいせつです。",
+    "quote_zh": "Empathy, thinking about your friends' feelings, is important.",
+    "ex_en": "彼はいつも周りの人に思いやりを持って接しています。 かれは いつも まわりの ひとに おもいやりを もって せっしています。",
+    "ex_zh": "He always treats people around him with consideration.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "温泉【おんせん】",
+    "pron": "onsen",
+    "def_en": "hot spring",
+    "def_zh": "温泉に入る；温泉地；温泉旅行",
+    "quote_en": "日本で温泉に入りました。 にほんで おんせんに はいりました。",
+    "quote_zh": "I went to a hot spring in Japan.",
+    "ex_en": "温泉は疲れた体に良くて、心もリラックスできます。 おんせんは つかれた からだに よくて、こころも りらっくすできます。",
+    "ex_zh": "Hot springs are good for tired bodies and also help you relax mentally.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "温暖化【おんだんか】",
+    "pron": "ondanka",
+    "def_en": "global warming",
+    "def_zh": "温暖化が進む；温暖化対策；地球温暖化",
+    "quote_en": "地球温暖化は深刻な問題です。 ちきゅうおんだんかは しんこくな もんだいです。",
+    "quote_zh": "Global warming is a serious problem.",
+    "ex_en": "温暖化を防ぐために、私たちはもっと環境について考えなければなりません。 おんだんかを ふせぐために、わたしたちは もっと かんきょうに ついて かんがえなければなりません。",
+    "ex_zh": "To prevent global warming, we must think more about the environment.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "会社【かいしゃ】",
+    "pron": "kaisha",
+    "def_en": "company",
+    "def_zh": "会社で働く；会社を経営する；大きい会社",
+    "quote_en": "父は会社に勤めています。 ちちは かいしゃに つとめています。",
+    "quote_zh": "My father works at a company.",
+    "ex_en": "彼は新しい会社を設立して、自分のやりたい仕事を始めました。 かれは あたらしい かいしゃを せつりつして、じぶんの やりたい しごとを はじめました。",
+    "ex_zh": "He established a new company and started doing the work he wanted to do.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "変える【かえる】",
+    "pron": "kaeru",
+    "def_en": "to change (something)",
+    "def_zh": "考え方を変える；予定を変える；色を変える",
+    "quote_en": "将来のために生活習慣を変えました。 しょうらいのために せいかつしゅうかんを かえました。",
+    "quote_zh": "I changed my lifestyle for the future.",
+    "ex_en": "この地域の人口が増えたので、交通ルールを変える必要があります。 この ちいきの じんこうが ふえたので、こうつうるーるを かえる ひつようが あります。",
+    "ex_zh": "Because the population of this area increased, there is a need to change the traffic rules.",
+    "part_of_speech": "v. (ru-verb)"
+  },
+  {
+    "word": "火山【かざん】",
+    "pron": "kazan",
+    "def_en": "volcano",
+    "def_zh": "活火山；火山が噴火する；火山の近く",
+    "quote_en": "日本にはたくさんの火山があります。 にほんには たくさんの かざんが あります。",
+    "quote_zh": "There are many volcanoes in Japan.",
+    "ex_en": "火山の噴火で、周りの町が大きな被害を受けました。 かざんの ふんかで、まわりの まちが おおきな ひがいを うけました。",
+    "ex_zh": "The town around the volcano suffered great damage from the eruption.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "ガソリン",
+    "pron": "gasorin",
+    "def_en": "petrol; gasoline",
+    "def_zh": "ガソリンを入れる；ガソリン代；ガソリンが高い",
+    "quote_en": "駅の近くでガソリンを入れました。 えきの ちかくで がそりんを いれました。",
+    "quote_zh": "I filled up with petrol near the station.",
+    "ex_en": "ガソリンの値段が上がって、車で通勤するのが大変です。 がそりんの ねだんが あがって、くるまで つうきんするのが たいへんです。",
+    "ex_zh": "Petrol prices have gone up, making commuting by car difficult.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "神様【かみさま】",
+    "pron": "kamisama",
+    "def_en": "deity; god",
+    "def_zh": "神様に祈る；神様を信じる；神様の力",
+    "quote_en": "神社で神様にお祈りしました。 じんじゃで かみさまに おいのりしました。",
+    "quote_zh": "I prayed to the gods at the shrine.",
+    "ex_en": "古い日本では、自然のものには神様がいると考えられていました。 ふるい にほんでは、しぜんの ものには かみさまが いると かんがえられていました。",
+    "ex_zh": "In ancient Japan, it was believed that gods resided in natural things.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "考える【かんがえる】",
+    "pron": "kangaeru",
+    "def_en": "to consider; to think",
+    "def_zh": "将来を考える；よく考える；考え直す",
+    "quote_en": "進路についてよく考えました。 しんろに ついて よく かんがえました。",
+    "quote_zh": "I thought carefully about my future path.",
+    "ex_en": "環境問題を考えるとき、私たち一人一人の行動が大切です。 かんきょうもんだいを かんがえるとき、わたしたち ひとりひとりの こうどうが たいせつです。",
+    "ex_zh": "When considering environmental issues, the actions of each individual are important.",
+    "part_of_speech": "v. (ru-verb)"
+  },
+  {
+    "word": "環境【かんきょう】",
+    "pron": "kankyō",
+    "def_en": "environment",
+    "def_zh": "環境を守る；環境に優しい；環境問題",
+    "quote_en": "環境のために、リサイクルをしています。 かんきょうのために、りさいくるを しています。",
+    "quote_zh": "I recycle for the environment.",
+    "ex_en": "この地域では環境保護の活動が盛んで、多くの人が参加しています。 この ちいきでは かんきょうほごの かつどうが さかんで、おおくの ひとが さんかしています。",
+    "ex_zh": "In this area, environmental protection activities are active, and many people participate.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "観光客【かんこうきゃく】",
+    "pron": "kankōkyaku",
+    "def_en": "tourist",
+    "def_zh": "観光客が来る；観光客で賑わう；外国からの観光客",
+    "quote_en": "京都には多くの観光客がいます。 きょうとには おおくの かんこうきゃくが います。",
+    "quote_zh": "There are many tourists in Kyoto.",
+    "ex_en": "観光客が増えて、町の経済が良くなりました。 かんこうきゃくが ふえて、まちの けいざいが よくなりました。",
+    "ex_zh": "The increase in tourists has improved the town's economy.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "観光地【かんこうち】",
+    "pron": "kankōchi",
+    "def_en": "tourist spot",
+    "def_zh": "有名な観光地；観光地を訪れる；人気の観光地",
+    "quote_en": "富士山は有名な観光地です。 ふじさんは ゆうめいな かんこうちです。",
+    "quote_zh": "Mount Fuji is a famous tourist spot.",
+    "ex_en": "この観光地は特に週末に多くの家族連れでにぎわいます。 この かんこうちは とくに しゅうまつに おおくの かぞくづれで にぎわいます。",
+    "ex_zh": "This tourist spot is particularly crowded with families on weekends.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "関心がある【かんしんがある】",
+    "pron": "kanshin ga aru",
+    "def_en": "to be concerned about; interested in",
+    "def_zh": "環境に関心がある；社会問題に関心がある；関心を持つ",
+    "quote_en": "私は国際問題に関心があります。 わたしは こくさいもんだいに かんしんが あります。",
+    "quote_zh": "I am interested in international issues.",
+    "ex_en": "若い人の間で政治に関心がある人が増えています。 わかい ひとの あいだで せいじに かんしんが ある ひとが ふえています。",
+    "ex_zh": "Among young people, those interested in politics are increasing.",
+    "part_of_speech": "phrase"
+  },
+  {
+    "word": "キウイ",
+    "pron": "kiuwi",
+    "def_en": "kiwifruit; kiwi (bird)",
+    "def_zh": "キウイを食べる；キウイフルーツ；キウイが好き",
+    "quote_en": "ニュージーランドのキウイは美味しいです。 にゅーじーらんどの きういは おいしいです。",
+    "quote_zh": "New Zealand kiwifruit is delicious.",
+    "ex_en": "国鳥のキウイは夜に活動する鳥で、飛ぶことができません。 こくちょうの きういは よるに かつどうする とりで、とぶことが できません。",
+    "ex_zh": "The national bird, the kiwi, is a bird that is active at night and cannot fly.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "気温【きおん】",
+    "pron": "kion",
+    "def_en": "temperature",
+    "def_zh": "気温が高い；気温が下がる；気温を測る",
+    "quote_en": "今日の気温は二十五度です。 きょうの きおんは にじゅうごどです。",
+    "quote_zh": "Today's temperature is 25 degrees.",
+    "ex_en": "冬の気温が低くなると、暖房を使う人が増えます。 ふゆの きおんが ひくくなると、だんぼうを つかう ひとが ふえます。",
+    "ex_zh": "When winter temperatures drop, more people use heating.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "気候【きこう】",
+    "pron": "kikō",
+    "def_en": "climate",
+    "def_zh": "温暖な気候；気候が変わる；気候に合う",
+    "quote_en": "日本は四季がある気候です。 にほんは しきが ある きこうです。",
+    "quote_zh": "Japan has a climate with four seasons.",
+    "ex_en": "地球温暖化で世界の気候が大きく変わっています。 ちきゅうおんだんかで せかいの きこうが おおきく かわっています。",
+    "ex_zh": "Global warming is causing the world's climate to change greatly.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "きっと",
+    "pron": "kitto",
+    "def_en": "surely",
+    "def_zh": "きっと大丈夫；きっと来る；きっとできる",
+    "quote_en": "きっと明日は晴れます。 きっと あしたは はれます。",
+    "quote_zh": "Surely it will be sunny tomorrow.",
+    "ex_en": "努力すれば、きっと夢は叶うと信じています。 どりょくすれば、きっと ゆめは かなうと しんじています。",
+    "ex_zh": "I believe that if you make an effort, your dreams will surely come true.",
+    "part_of_speech": "adverb"
+  },
+  {
+    "word": "キャラクター",
+    "pron": "kyarakutā",
+    "def_en": "character (fictional)",
+    "def_zh": "アニメのキャラクター；キャラクターグッズ；人気キャラクター",
+    "quote_en": "子供たちはそのキャラクターが大好きです。 こどもたちは その きゃらくたーが だいすきです。",
+    "quote_zh": "Children love that character.",
+    "ex_en": "この映画のキャラクターは世界中で有名になりました。 この えいがの きゃらくたーは せかいじゅうで ゆうめいに なりました。",
+    "ex_zh": "The characters in this movie became famous around the world.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "給料【きゅうりょう】",
+    "pron": "kyūryō",
+    "def_en": "salary",
+    "def_zh": "給料をもらう；給料が上がる；給料日",
+    "quote_en": "毎月二十日に給料をもらいます。 まいつき はつかに きゅうりょうを もらいます。",
+    "quote_zh": "I receive my salary on the 20th of every month.",
+    "ex_en": "給料が上がったので、少し貯金ができるようになりました。 きゅうりょうが あがったので、すこし ちょきんが できるように なりました。",
+    "ex_zh": "My salary increased, so I can save a little more.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "協力する【きょうりょくする】",
+    "pron": "kyōryoku suru",
+    "def_en": "to work together; to cooperate",
+    "def_zh": "チームで協力する；協力して問題を解決する；協力し合う",
+    "quote_en": "クラスメートと協力して発表しました。 くらすめーとと きょうりょくして はっぴょうしました。",
+    "quote_zh": "I cooperated with my classmates to give the presentation.",
+    "ex_en": "地域の人たちが協力して、毎月清掃活動を行っています。 ちいきの ひとたちが きょうりょくして、まいつき せいそうかつどうを おこなっています。",
+    "ex_zh": "Local people cooperate to carry out cleaning activities every month.",
+    "part_of_speech": "v. (suru)"
+  },
+  {
+    "word": "気をつける【きをつける】",
+    "pron": "ki o tsukeru",
+    "def_en": "to pay attention; to be careful",
+    "def_zh": "気をつけて運転する；健康に気をつける；気をつけてください",
+    "quote_en": "階段で気をつけてください。 かいだんで きをつけて ください。",
+    "quote_zh": "Please be careful on the stairs.",
+    "ex_en": "最近インフルエンザが流行っているので、手洗いをしっかり気をつけています。 さいきん いんふるえんざが はやっているので、てあらいを しっかり きをつけています。",
+    "ex_zh": "Recently influenza is spreading, so I'm being careful to wash my hands thoroughly.",
+    "part_of_speech": "phrase"
+  },
+  {
+    "word": "計画【けいかく】",
+    "pron": "keikaku",
+    "def_en": "plan",
+    "def_zh": "計画を立てる；計画を実行する；将来の計画",
+    "quote_en": "夏休みの計画を立てました。 なつやすみの けいかくを たてました。",
+    "quote_zh": "I made plans for summer vacation.",
+    "ex_en": "計画通りに進まなかったけれど、結果は良かったです。 けいかくどおりに すすまなかったけれど、けっかは よかったです。",
+    "ex_zh": "It didn't go according to plan, but the outcome was good.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "計画を立てる【けいかくをたてる】",
+    "pron": "keikaku o tateru",
+    "def_en": "to make plans",
+    "def_zh": "旅行の計画を立てる；入念に計画を立てる；計画を立て直す",
+    "quote_en": "友達と旅行の計画を立てました。 ともだちと りょこうの けいかくを たてました。",
+    "quote_zh": "I made travel plans with a friend.",
+    "ex_en": "新しいプロジェクトのために、チームで計画を立てました。 あたらしい ぷろじぇくと のために、ちーむで けいかくを たてました。",
+    "ex_zh": "We made a plan as a team for the new project.",
+    "part_of_speech": "phrase"
+  },
+  {
+    "word": "経験【けいけん】",
+    "pron": "keiken",
+    "def_en": "experience",
+    "def_zh": "経験が豊か；いい経験；経験を活かす",
+    "quote_en": "日本で生活した経験があります。 にほんで せいかつした けいけんが あります。",
+    "quote_zh": "I have experience living in Japan.",
+    "ex_en": "海外でのボランティア経験は、将来の仕事に役立つと思います。 かいがいでの ぼらんてぃあけいけんは、しょうらいの しごとに やくだつと おもいます。",
+    "ex_zh": "I think volunteering experience overseas will be useful for future work.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "経験する【けいけんする】",
+    "pron": "keiken suru",
+    "def_en": "to experience",
+    "def_zh": "初めての経験をする；大変なことを経験する；経験したこと",
+    "quote_en": "初めて地震を経験しました。 はじめて じしんを けいけんしました。",
+    "quote_zh": "I experienced an earthquake for the first time.",
+    "ex_en": "子供の頃に外国で生活したことを経験して、視野が広がりました。 こどもの ころに がいこくで せいかつした ことを けいけんして、しやが ひろがりました。",
+    "ex_zh": "Experiencing life abroad as a child broadened my perspective.",
+    "part_of_speech": "v. (suru)"
+  },
+  {
+    "word": "原因【げんいん】",
+    "pron": "gen'in",
+    "def_en": "cause",
+    "def_zh": "原因を調べる；原因を明らかにする；原因が分かる",
+    "quote_en": "事故の原因を調べています。 じこの げんいんを しらべています。",
+    "quote_zh": "I am investigating the cause of the accident.",
+    "ex_en": "環境問題の原因は、人間の活動にあると言われています。 かんきょうもんだいの げんいんは、にんげんの かつどうに あると いわれています。",
+    "ex_zh": "It is said that the cause of environmental problems lies in human activities.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "公害【こうがい】",
+    "pron": "kōgai",
+    "def_en": "pollution",
+    "def_zh": "公害問題；公害を防ぐ；公害が深刻",
+    "quote_en": "昔、日本では公害が大きな問題でした。 むかし、にほんでは こうがいが おおきな もんだいでした。",
+    "quote_zh": "In the past, pollution was a big problem in Japan.",
+    "ex_en": "工場が近くにあるので、公害について心配する人が増えています。 こうじょうが ちかくに あるので、こうがいに ついて しんぱいする ひとが ふえています。",
+    "ex_zh": "Because factories are nearby, more people are worried about pollution.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "工場【こうじょう】",
+    "pron": "kōjō",
+    "def_en": "factory",
+    "def_zh": "工場で働く；工場を建てる；工場が稼働する",
+    "quote_en": "父は自動車の工場で働いています。 ちちは じどうしゃの こうじょうで はたらいています。",
+    "quote_zh": "My father works at a car factory.",
+    "ex_en": "この地域に新しい工場ができて、雇用が増えました。 この ちいきに あたらしい こうじょうが できて、こようが ふえました。",
+    "ex_zh": "A new factory was built in this area, increasing employment.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "洪水【こうずい】",
+    "pron": "kōzui",
+    "def_en": "flood; flooding",
+    "def_zh": "洪水が起こる；洪水の被害；洪水に遭う",
+    "quote_en": "台風で洪水が起こりました。 たいふうで こうずいが おこりました。",
+    "quote_zh": "The typhoon caused flooding.",
+    "ex_en": "川の近くでは洪水の危険があるので、避難訓練が行われています。 かわの ちかくでは こうずいの きけんが あるので、ひなんくんれんが おこなわれています。",
+    "ex_zh": "Near the river there is a risk of flooding, so evacuation drills are held.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "交番【こうばん】",
+    "pron": "kōban",
+    "def_en": "police box",
+    "def_zh": "交番に行く；交番の警察官；交番で道を聞く",
+    "quote_en": "駅の前に交番があります。 えきの まえに こうばんが あります。",
+    "quote_zh": "There is a police box in front of the station.",
+    "ex_en": "道に迷ったとき、交番で道を教えてもらいました。 みちに まよったとき、こうばんで みちを おしえてもらいました。",
+    "ex_zh": "When I got lost, I asked for directions at the police box.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "心【こころ】",
+    "pron": "kokoro",
+    "def_en": "heart; mind",
+    "def_zh": "心が温かい；心に残る；心を込める",
+    "quote_en": "友達の言葉が心に残りました。 ともだちの ことばが こころに のこりました。",
+    "quote_zh": "My friend's words stayed in my heart.",
+    "ex_en": "心と体の健康のために、毎日十分な睡眠をとっています。 こころと からだの けんこうのために、まいにち じゅうぶんな すいみんを とっています。",
+    "ex_zh": "For both mental and physical health, I get enough sleep every day.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "事【こと】",
+    "pron": "koto",
+    "def_en": "matter; issue",
+    "def_zh": "大切なこと；事を起こす；事の次第",
+    "quote_en": "これからどうするか、大事なことです。 これから どうするか、だいじな ことです。",
+    "quote_zh": "What we do from now is an important matter.",
+    "ex_en": "環境問題は世界中で深刻な事です。 かんきょうもんだいは せかいじゅうで しんこくな ことです。",
+    "ex_zh": "Environmental issues are a serious matter all over the world.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "困る【こまる】",
+    "pron": "komaru",
+    "def_en": "to be troubled; to have trouble",
+    "def_zh": "何に困る；困った時に；困る問題",
+    "quote_en": "宿題が難しくて困っています。 しゅくだいが むずかしくて こまっています。",
+    "quote_zh": "I'm having trouble because the homework is difficult.",
+    "ex_en": "急に雨が降ってきて、傘がなくて困りました。 きゅうに あめが ふってきて、かさが なくて こまりました。",
+    "ex_zh": "It suddenly started raining, and I had trouble because I didn't have an umbrella.",
+    "part_of_speech": "v. (u-verb)"
+  },
+  {
+    "word": "壊れる【こわれる】",
+    "pron": "kowareru",
+    "def_en": "to break; to be broken",
+    "def_zh": "機械が壊れる；壊れて使えない；簡単に壊れる",
+    "quote_en": "パソコンが壊れてしまいました。 ぱそこんが こわれてしまいました。",
+    "quote_zh": "My computer broke.",
+    "ex_en": "地震で多くの建物が壊れましたが、ケガをした人はいませんでした。 じしんで おおくの たてものが こわれましたが、けがをした ひとは いませんでした。",
+    "ex_zh": "Many buildings were damaged in the earthquake, but no one was injured.",
+    "part_of_speech": "v. (ru-verb)"
+  },
+  {
+    "word": "コンポスト",
+    "pron": "konposuto",
+    "def_en": "compost",
+    "def_zh": "コンポストを作る；コンポストに捨てる；コンポストを使う",
+    "quote_en": "生ごみはコンポストに入れています。 なまごみは こんぽすとに いれています。",
+    "quote_zh": "I put food scraps in the compost.",
+    "ex_en": "家庭でコンポストを使うと、ごみが減らせて環境にもいいです。 かていで こんぽすとを つかうと、ごみが へらせて かんきょうにも いいです。",
+    "ex_zh": "Using compost at home reduces waste and is good for the environment.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "探す【さがす】",
+    "pron": "sagasu",
+    "def_en": "to look for",
+    "def_zh": "仕事を探す；答えを探す；探し物",
+    "quote_en": "新しいアパートを探しています。 あたらしい あぱーとを さがしています。",
+    "quote_zh": "I am looking for a new apartment.",
+    "ex_en": "将来やりたいことを探すために、いろいろな経験をしました。 しょうらい やりたい ことを さがすために、いろいろな けいけんを しました。",
+    "ex_zh": "I had various experiences to find what I want to do in the future.",
+    "part_of_speech": "v. (u-verb)"
+  },
+  {
+    "word": "下がる【さがる】",
+    "pron": "sagaru",
+    "def_en": "to lower; to go down",
+    "def_zh": "値段が下がる；温度が下がる；成績が下がる",
+    "quote_en": "最近、物の値段が下がりました。 さいきん、ものの ねだんが さがりました。",
+    "quote_zh": "Recently, prices have gone down.",
+    "ex_en": "冬になると気温が下がるので、暖房をつけます。 ふゆに なると きおんが さがるので、だんぼうを つけます。",
+    "ex_zh": "When winter comes, the temperature drops, so I turn on the heating.",
+    "part_of_speech": "v. (u-verb)"
+  },
+  {
+    "word": "差別【さべつ】",
+    "pron": "sabetsu",
+    "def_en": "discrimination",
+    "def_zh": "差別をなくす；差別に反対する；差別を受ける",
+    "quote_en": "差別は絶対に許されません。 さべつは ぜったいに ゆるされません。",
+    "quote_zh": "Discrimination is absolutely unforgivable.",
+    "ex_en": "人種や性別による差別がまだ世界中に存在しています。 じんしゅや せいべつによる さべつが まだ せかいじゅうに そんざいしています。",
+    "ex_zh": "Discrimination based on race or gender still exists all over the world.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "差別する【さべつする】",
+    "pron": "sabetsu suru",
+    "def_en": "to discriminate",
+    "def_zh": "人を差別する；差別されて傷つく；差別しない社会",
+    "quote_en": "外見だけで人を差別するのはよくありません。 がいけんだけで ひとを さべつするのは よくありません。",
+    "quote_zh": "Discriminating against people based only on appearance is not good.",
+    "ex_en": "どの国でも、全ての人が差別されない社会を作る必要があります。 どの くにでも、すべての ひとが さべつされない しゃかいを つくる ひつようが あります。",
+    "ex_zh": "In every country, we need to create a society where no one is discriminated against.",
+    "part_of_speech": "v. (suru)"
+  },
+  {
+    "word": "産業【さんぎょう】",
+    "pron": "sangyō",
+    "def_en": "industry",
+    "def_zh": "産業が発展する；農業産業；観光産業",
+    "quote_en": "この町の主な産業は農業です。 この まちの おもな さんぎょうは のうぎょうです。",
+    "quote_zh": "The main industry of this town is agriculture.",
+    "ex_en": "新しい技術が産業を変え、多くの仕事が生まれました。 あたらしい ぎじゅつが さんぎょうを かえ、おおくの しごとが うまれました。",
+    "ex_zh": "New technology has changed industry and created many jobs.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "賛成する【さんせいする】",
+    "pron": "sansei suru",
+    "def_en": "to agree",
+    "def_zh": "提案に賛成する；賛成して手を挙げる；賛成できない",
+    "quote_en": "彼の意見に賛成します。 かれの いけんに さんせいします。",
+    "quote_zh": "I agree with his opinion.",
+    "ex_en": "クラス全員が遠足の計画に賛成しました。 くらすぜんいんが えんそくの けいかくに さんせいしました。",
+    "ex_zh": "The whole class agreed with the field trip plan.",
+    "part_of_speech": "v. (suru)"
+  },
+  {
+    "word": "ジェンダー",
+    "pron": "jendā",
+    "def_en": "gender",
+    "def_zh": "ジェンダーの平等；ジェンダー問題；ジェンダーに関心がある",
+    "quote_en": "ジェンダーについて考えたことがありますか。 じぇんだーに ついて かんがえた ことが ありますか。",
+    "quote_zh": "Have you ever thought about gender?",
+    "ex_en": "学校ではジェンダーに関する授業があり、みんなで話し合いました。 がっこうでは じぇんだーに かんする じゅぎょうがあり、みんなで はなしあいました。",
+    "ex_zh": "At school, there was a class about gender, and we all discussed it.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "地震【じしん】",
+    "pron": "jishin",
+    "def_en": "earthquake",
+    "def_zh": "地震が起こる；地震に備える；地震の揺れ",
+    "quote_en": "昨夜、小さな地震がありました。 さくや、ちいさな じしんが ありました。",
+    "quote_zh": "There was a small earthquake last night.",
+    "ex_en": "地震の時は、まず机の下に入って自分の身を守ります。 じしんの ときは、まず つくえの したに はいって じぶんの みを まもります。",
+    "ex_zh": "During an earthquake, first get under a desk to protect yourself.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "首都【しゅと】",
+    "pron": "shuto",
+    "def_en": "capital city",
+    "def_zh": "首都に住む；首都を訪れる；日本の首都",
+    "quote_en": "日本の首都は東京です。 にほんの しゅとは とうきょうです。",
+    "quote_zh": "The capital of Japan is Tokyo.",
+    "ex_en": "首都には多くの人が集まり、政治や経済の中心となっています。 しゅとには おおくの ひとが あつまり、せいじや けいざいの ちゅうしんと なっています。",
+    "ex_zh": "Many people gather in the capital, and it is the center of politics and economy.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "資源【しげん】",
+    "pron": "shigen",
+    "def_en": "resources",
+    "def_zh": "天然資源；資源を守る；資源が豊か",
+    "quote_en": "この国は天然資源が豊かです。 この くには てんねんしげんが ゆたかです。",
+    "quote_zh": "This country is rich in natural resources.",
+    "ex_en": "限りある資源を大切に使うことが未来のために必要です。 かぎりある しげんを たいせつに つかうことが みらいのために ひつようです。",
+    "ex_zh": "Using limited resources carefully is necessary for the future.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "自然【しぜん】",
+    "pron": "shizen",
+    "def_en": "nature",
+    "def_zh": "自然を守る；自然豊かな場所；自然の美しさ",
+    "quote_en": "田舎は自然が多くて気持ちがいいです。 いなかは しぜんが おおくて きもちが いいです。",
+    "quote_zh": "The countryside has lots of nature and feels good.",
+    "ex_en": "私たちは自然と共存しながら生活していく必要があります。 わたしたちは しぜんと きょうぞんしながら せいかつしていく ひつようが あります。",
+    "ex_zh": "We need to live in harmony with nature.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "島【しま】",
+    "pron": "shima",
+    "def_en": "island",
+    "def_zh": "島に住む；島を旅行する；南の島",
+    "quote_en": "北海道は大きな島です。 ほっかいどうは おおきな しまです。",
+    "quote_zh": "Hokkaido is a large island.",
+    "ex_en": "日本は約六千八百の島からなる島国です。 にほんは やく ろくせんはっぴゃくの しまからなる しまぐにです。",
+    "ex_zh": "Japan is an island country consisting of about 6,800 islands.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "島国【しまぐに】",
+    "pron": "shimaguni",
+    "def_en": "island country",
+    "def_zh": "島国である；島国の特徴；島国の文化",
+    "quote_en": "日本は島国なので、海に囲まれています。 にほんは しまぐになので、うみに かこまれています。",
+    "quote_zh": "Japan is an island country, so it is surrounded by the sea.",
+    "ex_en": "島国であるニュージーランドには、独自の動植物が多くいます。 しまぐにである にゅーじーらんどには、どくじの どうしょくぶつが おおく います。",
+    "ex_zh": "New Zealand, being an island country, has many unique plants and animals.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "社会【しゃかい】",
+    "pron": "shakai",
+    "def_en": "society",
+    "def_zh": "社会に貢献する；現代社会；社会問題",
+    "quote_en": "社会のためにボランティアをしています。 しゃかいのために ぼらんてぃあを しています。",
+    "quote_zh": "I do volunteer work for society.",
+    "ex_en": "少子高齢化が進む社会で、どのように暮らしを支えるかが課題です。 しょうしこうれいかが すすむ しゃかいで、どのように くらしを ささえるかが かだいです。",
+    "ex_zh": "In an aging society with a declining birthrate, how to support daily life is a challenge.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "自由【じゆう】",
+    "pron": "jiyū",
+    "def_en": "freedom",
+    "def_zh": "自由な時間；自由に使う；自由が大事",
+    "quote_en": "週末は自由な時間があります。 しゅうまつは じゆうな じかんが あります。",
+    "quote_zh": "I have free time on weekends.",
+    "ex_en": "子供の頃は自由に遊ぶことが大切だと思います。 こどもの ころは じゆうに あそぶことが たいせつだと おもいます。",
+    "ex_zh": "I think it's important for children to play freely.",
+    "part_of_speech": "na-adj."
+  },
+  {
+    "word": "宗教【しゅうきょう】",
+    "pron": "shūkyō",
+    "def_en": "religion",
+    "def_zh": "宗教を信じる；宗教の自由；宗教行事",
+    "quote_en": "日本には様々な宗教があります。 にほんには さまざまな しゅうきょうが あります。",
+    "quote_zh": "There are various religions in Japan.",
+    "ex_en": "国によって宗教や習慣が違うので、旅行前に調べておくことが大切です。 くにによって しゅうきょうや しゅうかんが ちがうので、りょこうまえに しらべておくことが たいせつです。",
+    "ex_zh": "Since religion and customs differ by country, it's important to research before traveling.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "十分【じゅうぶん】",
+    "pron": "jūbun",
+    "def_en": "enough; sufficient",
+    "def_zh": "十分な時間；十分に準備する；十分に注意する",
+    "quote_en": "テストのために十分に勉強しました。 てすとのために じゅうぶんに べんきょうしました。",
+    "quote_zh": "I studied enough for the test.",
+    "ex_en": "健康を保つためには、十分な睡眠とバランスの良い食事が必要です。 けんこうを たもつためには、じゅうぶんな すいみんと ばらんすの よい しょくじが ひつようです。",
+    "ex_zh": "To maintain health, sufficient sleep and a balanced diet are necessary.",
+    "part_of_speech": "na-adj."
+  },
+  {
+    "word": "情報【じょうほう】",
+    "pron": "jōhō",
+    "def_en": "information",
+    "def_zh": "情報を集める；最新情報；情報が溢れる",
+    "quote_en": "インターネットで情報を調べました。 いんたーねっとで じょうほうを しらべました。",
+    "quote_zh": "I researched information on the internet.",
+    "ex_en": "正しい情報を見極める力が、今の時代には必要です。 ただしい じょうほうを みきわめる ちからが、いまの じだいには ひつようです。",
+    "ex_zh": "The ability to discern correct information is necessary in today's era.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "将来【しょうらい】",
+    "pron": "shōrai",
+    "def_en": "future",
+    "def_zh": "将来の夢；将来のために；将来が不安",
+    "quote_en": "将来は医者になりたいです。 しょうらいは いしゃに なりたいです。",
+    "quote_zh": "I want to become a doctor in the future.",
+    "ex_en": "将来のことを考えると、今からしっかり準備することが大切だと思います。 しょうらいの ことを かんがえると、いまから しっかり じゅんびすることが たいせつだと おもいます。",
+    "ex_zh": "When thinking about the future, I think it's important to prepare well from now.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "調べる【しらべる】",
+    "pron": "shiraberu",
+    "def_en": "to investigate; to look up",
+    "def_zh": "意味を調べる；歴史を調べる；調べ直す",
+    "quote_en": "わからない言葉の意味を調べました。 わからない ことばの いみを しらべました。",
+    "quote_zh": "I looked up the meaning of a word I didn't know.",
+    "ex_en": "宿題のために、図書館で日本の文化について調べました。 しゅくだいのために、としょかんで にほんの ぶんかに ついて しらべました。",
+    "ex_zh": "For my homework, I researched Japanese culture at the library.",
+    "part_of_speech": "v. (ru-verb)"
+  },
+  {
+    "word": "人口【じんこう】",
+    "pron": "jinkō",
+    "def_en": "population",
+    "def_zh": "人口が増える；人口密度；世界の人口",
+    "quote_en": "日本の人口は減少しています。 にほんの じんこうは げんしょうしています。",
+    "quote_zh": "Japan's population is decreasing.",
+    "ex_en": "この町の人口は十年前より増えて、にぎやかになりました。 この まちの じんこうは じゅうねんまえより ふえて、にぎやかに なりました。",
+    "ex_zh": "The population of this town has increased from ten years ago, making it livelier.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "生活する【せいかつする】",
+    "pron": "seikatsu suru",
+    "def_en": "to lead a life; to make a living",
+    "def_zh": "日本で生活する；田舎で生活する；生活しやすい町",
+    "quote_en": "私はニュージーランドで生活しています。 わたしは にゅーじーらんどで せいかつしています。",
+    "quote_zh": "I live in New Zealand.",
+    "ex_en": "地方で生活するのは、都会より物価が安くて住みやすいです。 ちほうで せいかつするのは、とかいより ぶっかが やすくて すみやすいです。",
+    "ex_zh": "Living in the countryside is cheaper and easier than in the city.",
+    "part_of_speech": "v. (suru)"
+  },
+  {
+    "word": "政府【せいふ】",
+    "pron": "seifu",
+    "def_en": "government",
+    "def_zh": "政府の方針；政府が支援する；政府に提案する",
+    "quote_en": "政府は環境問題に取り組んでいます。 せいふは かんきょうもんだいに とりくんでいます。",
+    "quote_zh": "The government is tackling environmental issues.",
+    "ex_en": "新しい法律について、政府は国民の意見を聞く会を開きました。 あたらしい ほうりつに ついて、せいふは こくみんの いけんを きく かいを ひらきました。",
+    "ex_zh": "Regarding the new law, the government held a meeting to hear citizens' opinions.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "世界【せかい】",
+    "pron": "sekai",
+    "def_en": "world",
+    "def_zh": "世界中；世界で一番；世界に広がる",
+    "quote_en": "世界には様々な国があります。 せかいには さまざまな くにが あります。",
+    "quote_zh": "There are many different countries in the world.",
+    "ex_en": "インターネットのおかげで、世界の情報がすぐに手に入ります。 いんたーねっとの おかげで、せかいの じょうほうが すぐに てに はいります。",
+    "ex_zh": "Thanks to the internet, information from around the world is instantly available.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "責任【せきにん】",
+    "pron": "sekinin",
+    "def_en": "responsibility",
+    "def_zh": "責任を取る；責任がある；責任感が強い",
+    "quote_en": "自分で決めたことには責任を持ちます。 じぶんで きめたことには せきにんを もちます。",
+    "quote_zh": "I take responsibility for my own decisions.",
+    "ex_en": "リーダーとしての責任は重いですが、やりがいがあります。 りーだーとしての せきにんは おもいですが、やりがいが あります。",
+    "ex_zh": "The responsibility as a leader is heavy, but it is rewarding.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "世代【せだい】",
+    "pron": "sedai",
+    "def_en": "generation",
+    "def_zh": "若い世代；世代交代；世代間の交流",
+    "quote_en": "若い世代はテクノロジーに慣れています。 わかい せだいは てくのろじーに なれています。",
+    "quote_zh": "The younger generation is accustomed to technology.",
+    "ex_en": "異なる世代の人と話すと、新しい考え方を学ぶことができます。 ことなる せだいの ひとと はなすと、あたらしい かんがえかたを まなぶことが できます。",
+    "ex_zh": "When you talk to people from different generations, you can learn new ways of thinking.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "絶対に【ぜったいに】",
+    "pron": "zettai ni",
+    "def_en": "definitely",
+    "def_zh": "絶対に行く；絶対に成功する；絶対に諦めない",
+    "quote_en": "約束は絶対に守ります。 やくそくは ぜったいに まもります。",
+    "quote_zh": "I definitely keep my promises.",
+    "ex_en": "絶対に無理だと思われた計画が、チームの協力で実現しました。 ぜったいに むりだと おもわれた けいかくが、ちーむの きょうりょくで じつげんしました。",
+    "ex_zh": "The plan that was thought absolutely impossible was realized through team cooperation.",
+    "part_of_speech": "adverb"
+  },
+  {
+    "word": "大事にする【だいじにする】",
+    "pron": "daiji ni suru",
+    "def_en": "to value; to take care of",
+    "def_zh": "家族を大事にする；時間を大事にする；大事にしてきた",
+    "quote_en": "友達との約束を大事にしています。 ともだちとの やくそくを だいじにしています。",
+    "quote_zh": "I value promises with my friends.",
+    "ex_en": "祖母からもらったペンは、とても大事に使っています。 そぼから もらった ぺんは、とても だいじに つかっています。",
+    "ex_zh": "I use the pen I received from my grandmother with great care.",
+    "part_of_speech": "phrase"
+  },
+  {
+    "word": "台風【たいふう】",
+    "pron": "taifū",
+    "def_en": "typhoon",
+    "def_zh": "台風が来る；台風に備える；台風の被害",
+    "quote_en": "台風のため、飛行機が欠航になりました。 たいふうのため、ひこうきが けっこうに なりました。",
+    "quote_zh": "Flights were cancelled due to the typhoon.",
+    "ex_en": "毎年夏から秋にかけて、日本にはたくさんの台風が来ます。 まいとし なつから あきにかけて、にほんには たくさんの たいふうが きます。",
+    "ex_zh": "Every year from summer to autumn, many typhoons hit Japan.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "助け合う【たすけあう】",
+    "pron": "tasukeau",
+    "def_en": "to help each other",
+    "def_zh": "助け合いの精神；困った時は助け合う；助け合って生きる",
+    "quote_en": "クラスメートと助け合って勉強しています。 くらすめーとと たすけあって べんきょうしています。",
+    "quote_zh": "I study by helping my classmates.",
+    "ex_en": "地域の人々が助け合うことで、安全で住みやすい町が作られています。 ちいきの ひとびとが たすけあうことで、あんぜんで すみやすい まちが つくられています。",
+    "ex_zh": "Through people in the community helping each other, a safe and livable town is created.",
+    "part_of_speech": "v. (u-verb)"
+  },
+  {
+    "word": "ただ",
+    "pron": "tada",
+    "def_en": "free of charge",
+    "def_zh": "ただで手に入れる；ただのサービス；ただでもらう",
+    "quote_en": "このアプリはただで使えます。 この あぷりは ただで つかえます。",
+    "quote_zh": "This app can be used for free.",
+    "ex_en": "博物館は子供はただで入ることができます。 はくぶつかんは こどもは ただで はいることが できます。",
+    "ex_zh": "Children can enter the museum for free.",
+    "part_of_speech": "adverb"
+  },
+  {
+    "word": "たぶん",
+    "pron": "tabun",
+    "def_en": "probably",
+    "def_zh": "たぶん大丈夫；たぶん来る；たぶん明日",
+    "quote_en": "たぶん、明日は晴れるでしょう。 たぶん、あしたは はれるでしょう。",
+    "quote_zh": "Probably it will be sunny tomorrow.",
+    "ex_en": "彼はたぶんもう帰ったと思います。 かれは たぶん もう かえったと おもいます。",
+    "ex_zh": "I think he has probably already gone home.",
+    "part_of_speech": "adverb"
+  },
+  {
+    "word": "多文化【たぶんか】",
+    "pron": "tabunka",
+    "def_en": "multicultural",
+    "def_zh": "多文化共生；多文化交流；多文化社会",
+    "quote_en": "ニュージーランドは多文化の国です。 にゅーじーらんどは たぶんかの くにです。",
+    "quote_zh": "New Zealand is a multicultural country.",
+    "ex_en": "多文化を理解するためには、異なる背景を持つ人と話すことが大切です。 たぶんかを りかいするためには、ことなる はいけいを もつ ひとと はなすことが たいせつです。",
+    "ex_zh": "To understand multiculturalism, it's important to talk with people from different backgrounds.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "貯める【ためる】",
+    "pron": "tameru",
+    "def_en": "to save (money)",
+    "def_zh": "お金を貯める；貯金する；少しずつ貯める",
+    "quote_en": "旅行のために毎月お金を貯めています。 りょこうのために まいつき おかねを ためています。",
+    "quote_zh": "I save money every month for travel.",
+    "ex_en": "無理なく貯めるために、給料の一部を自動で貯金するようにしました。 むりなく ためるために、きゅうりょうの いちぶを じどうで ちょきんするようにしました。",
+    "ex_zh": "To save without strain, I set up automatic savings from my salary.",
+    "part_of_speech": "v. (ru-verb)"
+  },
+  {
+    "word": "誰か【だれか】",
+    "pron": "dareka",
+    "def_en": "someone",
+    "def_zh": "誰かがいる；誰かと話す；誰かに頼む",
+    "quote_en": "誰かこの問題がわかる人はいますか。 だれか この もんだいが わかる ひとは いますか。",
+    "quote_zh": "Is there someone who understands this problem?",
+    "ex_en": "困った時は、誰かに相談することが大切だと思います。 こまった ときは、だれかに そうだんすることが たいせつだと おもいます。",
+    "ex_zh": "When you're in trouble, I think it's important to talk to someone.",
+    "part_of_speech": "pronoun"
+  },
+  {
+    "word": "誰でも【だれでも】",
+    "pron": "daredemo",
+    "def_en": "anyone; whoever",
+    "def_zh": "誰でも参加できる；誰でも知っている；誰でもいい",
+    "quote_en": "このクラブは誰でも入ることができます。 この くらぶは だれでも はいることが できます。",
+    "quote_zh": "Anyone can join this club.",
+    "ex_en": "誰でも最初は初心者です。 だれでも さいしょは しょしんしゃです。",
+    "ex_zh": "Everyone is a beginner at first.",
+    "part_of_speech": "pronoun"
+  },
+  {
+    "word": "誰も【だれも】",
+    "pron": "daremo",
+    "def_en": "no one (with negative)",
+    "def_zh": "誰もいない；誰も知らない；誰も来なかった",
+    "quote_en": "教室には誰もいませんでした。 きょうしつには だれも いませんでした。",
+    "quote_zh": "There was no one in the classroom.",
+    "ex_en": "その質問に答えられる人は、誰もいませんでした。 その しつもんに こたえられる ひとは、だれも いませんでした。",
+    "ex_zh": "There was no one who could answer that question.",
+    "part_of_speech": "pronoun"
+  },
+  {
+    "word": "地球【ちきゅう】",
+    "pron": "chikyū",
+    "def_en": "Earth; the globe",
+    "def_zh": "地球を守る；地球温暖化；地球規模",
+    "quote_en": "地球は美しい星です。 ちきゅうは うつくしい ほしです。",
+    "quote_zh": "The Earth is a beautiful planet.",
+    "ex_en": "私たち一人一人が地球環境について考え、行動することが必要です。 わたしたち ひとりひとりが ちきゅうかんきょうに ついて かんがえ、こうどうすることが ひつようです。",
+    "ex_zh": "Each of us needs to think about the global environment and take action.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "地方【ちほう】",
+    "pron": "chihō",
+    "def_en": "region; countryside",
+    "def_zh": "地方に住む；地方の活性化；地方と都会",
+    "quote_en": "私は地方で育ちました。 わたしは ちほうで そだちました。",
+    "quote_zh": "I grew up in the countryside.",
+    "ex_en": "地方には美しい自然が多く残っていて、観光客に人気です。 ちほうには うつくしい しぜんが おおく のこっていて、かんこうきゃくに にんきです。",
+    "ex_zh": "The countryside still has much beautiful nature and is popular with tourists.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "つゆ",
+    "pron": "tsuyu",
+    "def_en": "rainy season",
+    "def_zh": "つゆが明ける；つゆの時期；つゆに入る",
+    "quote_en": "日本では六月頃からつゆが始まります。 にほんでは ろくがつごろから つゆが はじまります。",
+    "quote_zh": "In Japan, the rainy season begins around June.",
+    "ex_en": "つゆの間は、毎日のように雨が降って、洗濯物が乾きにくくなります。 つゆの あいだは、まいにちのように あめが ふって、せんたくものが かわきにくく なります。",
+    "ex_zh": "During the rainy season, it rains almost every day, making laundry hard to dry.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "できるだけ",
+    "pron": "dekiru dake",
+    "def_en": "as much as possible",
+    "def_zh": "できるだけ早く；できるだけ多く；できるだけ安く",
+    "quote_en": "できるだけ日本語で話すようにしています。 できるだけ にほんごで はなすようにしています。",
+    "quote_zh": "I try to speak Japanese as much as possible.",
+    "ex_en": "環境のために、できるだけプラスチックごみを減らしています。 かんきょうのために、できるだけ ぷらすちっくごみを へらしています。",
+    "ex_zh": "For the environment, I try to reduce plastic waste as much as possible.",
+    "part_of_speech": "phrase"
+  },
+  {
+    "word": "出口【でぐち】",
+    "pron": "deguchi",
+    "def_en": "exit",
+    "def_zh": "出口を探す；非常口；出口に向かう",
+    "quote_en": "映画館の出口はこちらです。 えいがかんの でぐちは こちらです。",
+    "quote_zh": "The exit of the cinema is this way.",
+    "ex_en": "電車を降りるときは、出口の近くに移動しておきました。 でんしゃを おりるときは、でぐちの ちかくに いどうしておきました。",
+    "ex_zh": "When getting off the train, I moved near the exit beforehand.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "テクノロジー",
+    "pron": "tekunorojī",
+    "def_en": "technology",
+    "def_zh": "新しいテクノロジー；テクノロジーが進む；テクノロジーを活用する",
+    "quote_en": "テクノロジーの発展はすごいです。 てくのろじーの はってんは すごいです。",
+    "quote_zh": "The development of technology is amazing.",
+    "ex_en": "最近のテクノロジーを使えば、遠くにいる人とも簡単に話せます。 さいきんの てくのろじーを つかえば、とおくに いる ひととも かんたんに はなせます。",
+    "ex_zh": "With recent technology, you can easily talk with people far away.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "都会【とかい】",
+    "pron": "tokai",
+    "def_en": "urban area; city",
+    "def_zh": "都会に住む；都会の生活；都会へ出る",
+    "quote_en": "都会は交通が便利です。 とかいは こうつうが べんりです。",
+    "quote_zh": "The city has convenient transportation.",
+    "ex_en": "若者は仕事を求めて都会に集まりますが、家賃が高いことが悩みです。 わかものは しごとを もとめて とかいに あつまりますが、やちんが たかいことが なやみです。",
+    "ex_zh": "Young people gather in cities looking for work, but high rent is a problem.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "特に【とくに】",
+    "pron": "tokuni",
+    "def_en": "especially",
+    "def_zh": "特に好き；特に気をつける；特に大事",
+    "quote_en": "私は特に夏が好きです。 わたしは とくに なつが すきです。",
+    "quote_zh": "I especially like summer.",
+    "ex_en": "この地域は特に冬に雪が多く、交通が止まることがあります。 この ちいきは とくに ふゆに ゆきが おおく、こうつうが とまることが あります。",
+    "ex_zh": "This region gets especially heavy snow in winter, sometimes halting transportation.",
+    "part_of_speech": "adverb"
+  },
+  {
+    "word": "どこか",
+    "pron": "dokoka",
+    "def_en": "somewhere",
+    "def_zh": "どこかへ行く；どこかで会う；どこかにいる",
+    "quote_en": "週末はどこかへ出かけたいです。 しゅうまつは どこかへ でかけたいです。",
+    "quote_zh": "I want to go somewhere on the weekend.",
+    "ex_en": "どこか静かな場所で、ゆっくり本を読みたいです。 どこか しずかな ばしょで、ゆっくり ほんを よみたいです。",
+    "ex_zh": "I want to read a book slowly somewhere quiet.",
+    "part_of_speech": "pronoun"
+  },
+  {
+    "word": "どこでも",
+    "pron": "dokodemo",
+    "def_en": "anywhere",
+    "def_zh": "どこでも行ける；どこでも使える；どこでもいい",
+    "quote_en": "この切符はどこでも使えますか。 この きっぷは どこでも つかえますか。",
+    "quote_zh": "Can I use this ticket anywhere?",
+    "ex_en": "図書館ならどこでも無料で本が読めるわけではありません。 としょかん なら どこでも むりょうで ほんが よめる わけではありません。",
+    "ex_zh": "Not every library allows you to read books for free.",
+    "part_of_speech": "pronoun"
+  },
+  {
+    "word": "どこも",
+    "pron": "dokomo",
+    "def_en": "nowhere (with negative)",
+    "def_zh": "どこも行かない；どこも空いていない；どこも同じ",
+    "quote_en": "今日はどこも行きませんでした。 きょうは どこも いきませんでした。",
+    "quote_zh": "I didn't go anywhere today.",
+    "ex_en": "休日はどの店も混んでいて、どこも空いていませんでした。 きゅうじつは どの みせも こんでいて、どこも あいていませんでした。",
+    "ex_zh": "On holidays all shops were crowded, and nowhere was empty.",
+    "part_of_speech": "pronoun"
+  },
+  {
+    "word": "努力する【どりょくする】",
+    "pron": "doryoku suru",
+    "def_en": "to make an effort",
+    "def_zh": "目標に向けて努力する；努力を続ける；努力が報われる",
+    "quote_en": "試験に合格するために努力しました。 しけんに ごうかくするために どりょくしました。",
+    "quote_zh": "I made an effort to pass the exam.",
+    "ex_en": "努力した結果、目標を達成することができました。 どりょくした けっか、もくひょうを たっせいすることが できました。",
+    "ex_zh": "As a result of my efforts, I was able to achieve my goal.",
+    "part_of_speech": "v. (suru)"
+  },
+  {
+    "word": "直す【なおす】",
+    "pron": "naosu",
+    "def_en": "to repair; to fix",
+    "def_zh": "壊れたものを直す；自分で直す；直してもらう",
+    "quote_en": "自転車が壊れたので、直しました。 じてんしゃが こわれたので、なおしました。",
+    "quote_zh": "My bicycle broke, so I repaired it.",
+    "ex_en": "コンピューターが動かなくなったので、専門家に直してもらいました。 こんぴゅーたーが うごかなくなったので、せんもんかに なおしてもらいました。",
+    "ex_zh": "When my computer stopped working, I had a specialist fix it.",
+    "part_of_speech": "v. (u-verb)"
+  },
+  {
+    "word": "なにか",
+    "pron": "nanika",
+    "def_en": "something",
+    "def_zh": "なにかを探す；なにかを食べる；なかにある",
+    "quote_en": "冷蔵庫になにかありますか。 れいぞうこに なにか ありますか。",
+    "quote_zh": "Is there something in the fridge?",
+    "ex_en": "困ったときは、なにか新しいことに挑戦すると気持ちが変わります。 こまったときは、なにか あたらしい ことに ちょうせんすると きもちが かわります。",
+    "ex_zh": "When you're troubled, trying something new can change your mood.",
+    "part_of_speech": "pronoun"
+  },
+  {
+    "word": "なにも",
+    "pron": "nanimo",
+    "def_en": "nothing (with negative)",
+    "def_zh": "なにもない；なにも知らない；なにも言わない",
+    "quote_en": "冷蔵庫にはなにもありませんでした。 れいぞうこには なにも ありませんでした。",
+    "quote_zh": "There was nothing in the fridge.",
+    "ex_en": "彼はなにも言わずに、部屋を出て行きました。 かれは なにも いわずに、へやを でて いきました。",
+    "ex_zh": "He left the room without saying anything.",
+    "part_of_speech": "pronoun"
+  },
+  {
+    "word": "なんでも",
+    "pron": "nandemo",
+    "def_en": "anything",
+    "def_zh": "なんでもいい；なんでも食べる；なんでもできる",
+    "quote_en": "このレストランではなんでも食べられますか。 この れすとらんでは なんでも たべられますか。",
+    "quote_zh": "Can I eat anything at this restaurant?",
+    "ex_en": "子供の頃はなんでも食べられましたが、大人になると好き嫌いが出てきました。 こどもの ころは なんでも たべられましたが、おとなに なると すききらいが でてきました。",
+    "ex_zh": "When I was a child I could eat anything, but as an adult I've developed likes and dislikes.",
+    "part_of_speech": "pronoun"
+  },
+  {
+    "word": "について",
+    "pron": "ni tsuite",
+    "def_en": "about (following a noun)",
+    "def_zh": "〜について話す；〜について考える；〜について調べる",
+    "quote_en": "日本の文化について勉強しています。 にほんの ぶんかに ついて べんきょうしています。",
+    "quote_zh": "I am studying about Japanese culture.",
+    "ex_en": "環境問題について、クラスで話し合う機会がありました。 かんきょうもんだいに ついて、くらすで はなしあう きかいが ありました。",
+    "ex_zh": "There was an opportunity to discuss environmental issues in class.",
+    "part_of_speech": "phrase"
+  },
+  {
+    "word": "によって",
+    "pron": "ni yotte",
+    "def_en": "depending on; by means of",
+    "def_zh": "〜によって違う；〜によって決まる；人によって",
+    "quote_en": "地域によって習慣が違います。 ちいきに よって しゅうかんが ちがいます。",
+    "quote_zh": "Customs differ depending on the region.",
+    "ex_en": "このプロジェクトの成功は、チームの協力によって決まると言われています。 この ぷろじぇくと の せいこうは、ちーむの きょうりょくに よって きまると いわれています。",
+    "ex_zh": "It is said that the success of this project depends on the team's cooperation.",
+    "part_of_speech": "phrase"
+  },
+  {
+    "word": "のかわりに",
+    "pron": "no kawari ni",
+    "def_en": "instead of (following a noun)",
+    "def_zh": "〜のかわりに使う；〜のかわりに代わる；〜のかわりに立つ",
+    "quote_en": "車のかわりに自転車で通勤しています。 くるまの かわりに じてんしゃで つうきんしています。",
+    "quote_zh": "I commute by bicycle instead of car.",
+    "ex_en": "雨が降ったので、公園で遊ぶかわりに家でゲームをしました。 あめが ふったので、こうえんで あそぶ かわりに いえで げーむを しました。",
+    "ex_zh": "Because it rained, instead of playing in the park I played games at home.",
+    "part_of_speech": "phrase"
+  },
+  {
+    "word": "乗り換える【のりかえる】",
+    "pron": "norikaeru",
+    "def_en": "to change (trains, buses)",
+    "def_zh": "電車を乗り換える；駅で乗り換える；乗り換え時間",
+    "quote_en": "新宿で電車を乗り換えます。 しんじゅくで でんしゃを のりかえます。",
+    "quote_zh": "I change trains at Shinjuku.",
+    "ex_en": "飛行機に乗る前に、バスから電車に乗り換えました。 ひこうきに のる まえに、ばすから でんしゃに のりかえました。",
+    "ex_zh": "Before taking the plane, I changed from bus to train.",
+    "part_of_speech": "v. (ru-verb)"
+  },
+  {
+    "word": "博物館【はくぶつかん】",
+    "pron": "hakubutsukan",
+    "def_en": "museum",
+    "def_zh": "博物館に行く；博物館を訪れる；博物館の展示",
+    "quote_en": "週末に博物館へ行きました。 しゅうまつに はくぶつかんへ いきました。",
+    "quote_zh": "I went to the museum on the weekend.",
+    "ex_en": "この博物館では、古代の遺物がたくさん展示されています。 この はくぶつかんで は、こだいの いぶつが たくさん てんじされています。",
+    "ex_zh": "Many ancient artifacts are displayed at this museum.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "はっきり",
+    "pron": "hakkiri",
+    "def_en": "clearly",
+    "def_zh": "はっきり言う；はっきり見える；はっきり覚える",
+    "quote_en": "自分の意見をはっきり言いました。 じぶんの いけんを はっきり いいました。",
+    "quote_zh": "I stated my opinion clearly.",
+    "ex_en": "先生の説明ははっきりしていて、すぐに理解できました。 せんせいの せつめいは はっきりしていて、すぐに りかいできました。",
+    "ex_zh": "The teacher's explanation was clear, and I understood it immediately.",
+    "part_of_speech": "adverb"
+  },
+  {
+    "word": "反対【はんたい】",
+    "pron": "hantai",
+    "def_en": "opposite",
+    "def_zh": "反対の意見；反対側；反対方向",
+    "quote_en": "彼の意見に反対です。 かれの いけんに はんたいです。",
+    "quote_zh": "I oppose his opinion.",
+    "ex_en": "駅は道路の反対側にあります。 えきは どうろの はんたいがわに あります。",
+    "ex_zh": "The station is on the opposite side of the road.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "反対する【はんたいする】",
+    "pron": "hantai suru",
+    "def_en": "to oppose",
+    "def_zh": "計画に反対する；反対する人；反対の立場",
+    "quote_en": "私はその提案に反対します。 わたしは その ていあんに はんたいします。",
+    "quote_zh": "I oppose that proposal.",
+    "ex_en": "彼は新しい法律に反対して、デモに参加しました。 かれは あたらしい ほうりつに はんたいして、でもに さんかしました。",
+    "ex_zh": "He opposed the new law and participated in a demonstration.",
+    "part_of_speech": "v. (suru)"
+  },
+  {
+    "word": "ビジネス",
+    "pron": "bijinesu",
+    "def_en": "business; Business (school subject)",
+    "def_zh": "ビジネスを始める；ビジネスパートナー；ビジネスチャンス",
+    "quote_en": "彼は自分のビジネスを始めました。 かれは じぶんの びじねすを はじめました。",
+    "quote_zh": "He started his own business.",
+    "ex_en": "大学ではビジネスを勉強して、将来は起業したいと考えています。 だいがくでは びじねすを べんきょうして、しょうらいは きぎょうしたいと かんがえています。",
+    "ex_zh": "I study business at university and think about starting my own company in the future.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "拾う【ひろう】",
+    "pron": "hirou",
+    "def_en": "to pick up; to gather",
+    "def_zh": "ゴミを拾う；落ち物を拾う；拾い集める",
+    "quote_en": "公園でゴミを拾いました。 こうえんで ごみを ひろいました。",
+    "quote_zh": "I picked up trash at the park.",
+    "ex_en": "道で財布を拾って、交番に届けました。 みちで さいふを ひろって、こうばんに とどけました。",
+    "ex_zh": "I found a wallet on the street and turned it in to the police box.",
+    "part_of_speech": "v. (u-verb)"
+  },
+  {
+    "word": "降る【ふる】",
+    "pron": "furu",
+    "def_en": "to fall (rain, snow, etc.)",
+    "def_zh": "雨が降る；雪が降る；激しく降る",
+    "quote_en": "明日は雨が降るでしょう。 あしたは あめが ふるでしょう。",
+    "quote_zh": "It will probably rain tomorrow.",
+    "ex_en": "昨夜から雪が降り続けて、朝には道路が真っ白になりました。 さくやから ゆきが ふりつづけて、あさには どうろが まっしろに なりました。",
+    "ex_zh": "Snow has been falling since last night, and by morning the roads were completely white.",
+    "part_of_speech": "v. (u-verb)"
+  },
+  {
+    "word": "フレンドリー【ふれんどりー】",
+    "pron": "furendorī",
+    "def_en": "friendly",
+    "def_zh": "フレンドリーな人；フレンドリーに話す；フレンドリーな態度",
+    "quote_en": "彼女はとてもフレンドリーです。 かのじょは とても ふれんどりーです。",
+    "quote_zh": "She is very friendly.",
+    "ex_en": "初対面でもフレンドリーに接してくれる人がいると、安心します。 しょたいめんでも ふれんどりーに せっしてくれる ひとが いると、あんしんします。",
+    "ex_zh": "When someone is friendly even on the first meeting, it puts you at ease.",
+    "part_of_speech": "na-adj."
+  },
+  {
+    "word": "平和【へいわ】",
+    "pron": "heiwa",
+    "def_en": "peace",
+    "def_zh": "平和を願う；世界平和；平和な社会",
+    "quote_en": "私たちは平和を願っています。 わたしたちは へいわを ねがっています。",
+    "quote_zh": "We wish for peace.",
+    "ex_en": "戦争のない平和な世界を未来の世代に残したいです。 せんそうの ない へいわな せかいを みらいの せだいに のこしたいです。",
+    "ex_zh": "I want to leave a peaceful world without war for future generations.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "ポップカルチャー",
+    "pron": "poppu karuchā",
+    "def_en": "pop culture",
+    "def_zh": "日本のポップカルチャー；ポップカルチャーが人気；ポップカルチャーを楽しむ",
+    "quote_en": "若者はポップカルチャーに興味があります。 わかものは ぽっぷかるちゃーに きょうみが あります。",
+    "quote_zh": "Young people are interested in pop culture.",
+    "ex_en": "日本のポップカルチャーは世界中で人気があり、多くのファンがいます。 にほんの ぽっぷかるちゃーは せかいじゅうで にんきがあり、おおくの ふぁんが います。",
+    "ex_zh": "Japanese pop culture is popular worldwide and has many fans.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "見つける【みつける】",
+    "pron": "mitsukeru",
+    "def_en": "to find",
+    "def_zh": "仕事を見つける；答えを見つける；見つけ出す",
+    "quote_en": "良いレストランを見つけました。 よい れすとらんを みつけました。",
+    "quote_zh": "I found a good restaurant.",
+    "ex_en": "長い間探していた本を、古本屋でようやく見つけました。 ながい あいだ さがしていた ほんを、ふるほんやで ようやく みつけました。",
+    "ex_zh": "I finally found the book I had been looking for for a long time at a secondhand bookstore.",
+    "part_of_speech": "v. (ru-verb)"
+  },
+  {
+    "word": "もう一度【もういちど】",
+    "pron": "mō ichido",
+    "def_en": "once more",
+    "def_zh": "もう一度言う；もう一度考える；もう一度やってみる",
+    "quote_en": "もう一度説明してください。 もういちど せつめいしてください。",
+    "quote_zh": "Please explain once more.",
+    "ex_en": "失敗しても、もう一度挑戦すればいいと思います。 しっぱいしても、もういちど ちょうせんすれば いいと おもいます。",
+    "ex_zh": "Even if you fail, I think it's okay to try once more.",
+    "part_of_speech": "phrase"
+  },
+  {
+    "word": "持つ【もつ】",
+    "pron": "motsu",
+    "def_en": "to have; to hold",
+    "def_zh": "興味を持つ；責任を持つ；夢を持つ",
+    "quote_en": "私は大きな夢を持っています。 わたしは おおきな ゆめを もっています。",
+    "quote_zh": "I have a big dream.",
+    "ex_en": "将来の目標を持つことは、毎日の生活に張り合いを与えてくれます。 しょうらいの もくひょうを もつことは、まいにちの せいかつに はりあいを あたえてくれます。",
+    "ex_zh": "Having a future goal gives meaning to daily life.",
+    "part_of_speech": "v. (u-verb)"
+  },
+  {
+    "word": "物【もの】",
+    "pron": "mono",
+    "def_en": "thing; object",
+    "def_zh": "大切な物；物を大切にする；物が増える",
+    "quote_en": "これは私の大切な物です。 これは わたしの たいせつな ものです。",
+    "quote_zh": "This is a precious thing to me.",
+    "ex_en": "使わなくなった物は、リサイクルに出すようにしています。 つかわなくなった ものは、りさいくるに だすようにしています。",
+    "ex_zh": "I try to recycle things I no longer use.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "やっぱり",
+    "pron": "yappari",
+    "def_en": "as I thought; after all",
+    "def_zh": "やっぱりそうだ；やっぱり行く；やっぱり難しい",
+    "quote_en": "やっぱり、今日は雨でしたね。 やっぱり、きょうは あめでしたね。",
+    "quote_zh": "As I thought, it rained today.",
+    "ex_en": "他のレストランも考えたけど、やっぱりいつもの店が一番美味しいです。 ほかの れすとらんも かんがえたけど、やっぱり いつもの みせが いちばん おいしいです。",
+    "ex_zh": "I considered other restaurants, but after all, my usual place is the best.",
+    "part_of_speech": "adverb"
+  },
+  {
+    "word": "やる",
+    "pron": "yaru",
+    "def_en": "to do",
+    "def_zh": "やる気がある；やるべきこと；やってみる",
+    "quote_en": "明日までに宿題をやります。 あしたまでに しゅくだいを やります。",
+    "quote_zh": "I will do my homework by tomorrow.",
+    "ex_en": "新しいことに挑戦したいなら、まずやってみることが大切です。 あたらしい ことに ちょうせんしたいなら、まず やってみることが たいせつです。",
+    "ex_zh": "If you want to challenge yourself with something new, it's important to first give it a try.",
+    "part_of_speech": "v. (u-verb)"
+  },
+  {
+    "word": "夢【ゆめ】",
+    "pron": "yume",
+    "def_en": "dream",
+    "def_zh": "夢を叶える；夢を持つ；夢に向かう",
+    "quote_en": "私は医者になる夢があります。 わたしは いしゃに なる ゆめが あります。",
+    "quote_zh": "I have a dream of becoming a doctor.",
+    "ex_en": "子供の頃の夢は、今でも大切にしています。 こどもの ころの ゆめは、いまでも たいせつにしています。",
+    "ex_zh": "I still cherish the dreams I had as a child.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "ロボット",
+    "pron": "robotto",
+    "def_en": "robot",
+    "def_zh": "ロボットを作る；ロボット技術；ロボットが活躍する",
+    "quote_en": "工場ではロボットが働いています。 こうじょうでは ろぼっとが はたらいています。",
+    "quote_zh": "Robots work in factories.",
+    "ex_en": "最近のロボットは、人間のように話すことができるものもあります。 さいきんの ろぼっとは、にんげんのように はなすことが できる ものも あります。",
+    "ex_zh": "Some recent robots can even talk like humans.",
+    "part_of_speech": "noun"
+  },
+  {
+    "word": "分ける【わける】",
+    "pron": "wakeru",
+    "def_en": "to divide; to share",
+    "def_zh": "グループに分ける；半分に分ける；分け合う",
+    "quote_en": "クラスを三つのグループに分けました。 くらすを みっつの ぐるーぷに わけました。",
+    "quote_zh": "I divided the class into three groups.",
+    "ex_en": "友達とお菓子を分けて食べると、より美味しく感じます。 ともだちと おかしを わけて たべると、より おいしく かんじます。",
+    "ex_zh": "When you share sweets with a friend, they taste even better.",
+    "part_of_speech": "v. (ru-verb)"
+  },
+  {
+    "word": "～川【～がわ】",
+    "pron": "~gawa",
+    "def_en": "river (suffix for names)",
+    "def_zh": "隅田川；多摩川；川沿い",
+    "quote_en": "隅田川は東京を流れる川です。 すみだがわは とうきょうを ながれる かわです。",
+    "quote_zh": "The Sumida River is a river that flows through Tokyo.",
+    "ex_en": "多摩川の近くで、週末に家族でバーベキューをしました。 たまがわの ちかくで、しゅうまつに かぞくで ばーべきゅーを しました。",
+    "ex_zh": "I had a barbecue with my family near the Tama River on the weekend.",
+    "part_of_speech": "suffix"
+  },
+  {
+    "word": "～湖【～こ】",
+    "pron": "~ko",
+    "def_en": "lake (suffix for names)",
+    "def_zh": "琵琶湖；河口湖；湖のほとり",
+    "quote_en": "琵琶湖は日本で一番大きい湖です。 びわこは にほんで いちばん おおきい みずうみです。",
+    "quote_zh": "Lake Biwa is the largest lake in Japan.",
+    "ex_en": "河口湖の周りには、富士山を見る観光客がたくさん来ます。 かわぐちこの まわりには、ふじさんを みる かんこうきゃくが たくさん きます。",
+    "ex_zh": "Many tourists come to the area around Lake Kawaguchi to see Mount Fuji.",
+    "part_of_speech": "suffix"
+  },
+  {
+    "word": "～山【～さん】",
+    "pron": "~san",
+    "def_en": "Mount (suffix for names)",
+    "def_zh": "富士山；高尾山；山登り",
+    "quote_en": "富士山は日本の象徴です。 ふじさんは にほんの しょうちょうです。",
+    "quote_zh": "Mount Fuji is a symbol of Japan.",
+    "ex_en": "高尾山は東京から近く、週末には多くの人がハイキングに来ます。 たかおさんは とうきょうから ちかく、しゅうまつには おおくの ひとが はいきんぐに きます。",
+    "ex_zh": "Mount Takao is near Tokyo, and many people come hiking on weekends.",
+    "part_of_speech": "suffix"
+  },
+  {
+    "word": "～度【～ど】",
+    "pron": "~do",
+    "def_en": "degree (temperature)",
+    "def_zh": "三十度；温度を測る；気温が上がる",
+    "quote_en": "今日の気温は二十五度です。 きょうの きおんは にじゅうごどです。",
+    "quote_zh": "Today's temperature is 25 degrees.",
+    "ex_en": "夏には温度が三十五度以上になる日もあり、熱中症に気をつけなければなりません。 なつには おんどが さんじゅうごど いじょうに なる ひも あり、ねっちゅうしょうに きをつけなければなりません。",
+    "ex_zh": "In summer, there are days when the temperature rises above 35 degrees, and we must be careful about heatstroke.",
+    "part_of_speech": "suffix"
+  },
+  {
+    "word": "～回【～かい】",
+    "pron": "~kai",
+    "def_en": "counter for number of times",
+    "def_zh": "一回；何回も；三回目",
+    "quote_en": "私はその映画を三回見ました。 わたしは その えいがを さんかい みました。",
+    "quote_zh": "I saw that movie three times.",
+    "ex_en": "週に二回、日本語のクラスに通っています。 しゅうに にかい、にほんごの くらすに かよっています。",
+    "ex_zh": "I attend Japanese class twice a week.",
+    "part_of_speech": "suffix"
+  }
+];
+
+// ============================================================
+// SYNONYMS/ANTONYMS DATA
+// ============================================================
+const SYNAN = JSON.parse(decodeURIComponent(escape(atob("eyLjgqLjgqTjg4fjg7Pjg4bjgqPjg4bjgqMiOnsic3luIjpbXSwiYW50IjpbXX0sIuOCouOCpuODiOODieOCoiI6eyJzeW4iOltdLCJhbnQiOltdfSwi5LiK44GM44KL44CQ44GC44GM44KL44CRIjp7InN5biI6WyLkuIrjgYzjgosg44GC44GM44KLIl0sImFudCI6WyLkuIvjgYzjgosg44GV44GM44KLIl19LCLmoYjlhoXjgZnjgovjgJDjgYLjgpPjgarjgYTjgZnjgovjgJEiOnsic3luIjpbIuahiOWGheOBmeOCiyDjgYLjgpPjgarjgYTjgZnjgosiLCLmoYjlhoXjgZnjgosg44GC44KT44Gq44GE44GZ44KLIl0sImFudCI6W119LCLmhI/opovjgJDjgYTjgZHjgpPjgJEiOnsic3luIjpbIuiAg+OBiCDjgYvjgpPjgYzjgYgiLCLmhI/oposg44GE44GR44KTIl0sImFudCI6W119LCLkuIDml6XkuK3jgJDjgYTjgaHjgavjgaHjgZjjgoXjgYbjgJEiOnsic3luIjpbIuS4gOaXpeS4rSDjgYTjgaHjgavjgaHjgZjjgoXjgYYiXSwiYW50IjpbXX0sIuOBhOOBpOOBiyI6eyJzeW4iOlsi44Gd44Gu44GG44GhIOOBneOBruOBhuOBoSIsIuOBhOOBmuOCjCDjgYTjgZrjgowiXSwiYW50IjpbXX0sIuOBhOOBpOOBp+OCgiI6eyJzeW4iOlsi44GE44Gk44KCIOOBhOOBpOOCgiIsIuW4uOOBqyDjgaTjga3jgasiXSwiYW50IjpbIuS4gOW6puOCgiDjgYTjgaHjganjgoIiXX0sIuenu+awkeOAkOOBhOOBv+OCk+OAkSI6eyJzeW4iOlsi56e75rCRIOOBhOOBv+OCkyJdLCJhbnQiOltdfSwi44Kk44Oz44OV44Or44Ko44Oz44K144O8Ijp7InN5biI6W10sImFudCI6W119LCLmpI3jgYjjgovjgJDjgYbjgYjjgovjgJEiOnsic3luIjpbIuakjeOBiOOCiyDjgYbjgYjjgosiLCLmpI3jgYjjgosg44GG44GI44KLIl0sImFudCI6WyLmipzjgY8g44Gs44GPIl19LCLlvbHpn7/jgJDjgYjjgYTjgY3jgofjgYbjgJEiOnsic3luIjpbIuW9semfvyDjgYjjgYTjgY3jgofjgYYiXSwiYW50IjpbXX0sIuW9semfv+OBmeOCi+OAkOOBiOOBhOOBjeOCh+OBhuOBmeOCi+OAkSI6eyJzeW4iOlsi5b2x6Z+/44GZ44KLIOOBiOOBhOOBjeOCh+OBhuOBmeOCiyJdLCJhbnQiOltdfSwi44Ko44KzKOOBqikiOnsic3luIjpbIuOCqOOCsyDjgYjjgZMiXSwiYW50IjpbXX0sIumfs+OAkOOBiuOBqOOAkSI6eyJzeW4iOlsi6Z+zIOOBiuOBqCIsIuWjsCDjgZPjgYgiXSwiYW50IjpbIumdmeOBkeOBlSDjgZfjgZrjgZHjgZUiXX0sIuOBiuOBqOOBl+OCiOOCiiI6eyJzeW4iOlsi44GK5bm05a+E44KKIOOBiuOBqOOBl+OCiOOCiiIsIumrmOm9ouiAhSDjgZPjgYbjgozjgYTjgZfjgoMiXSwiYW50IjpbIuiLpeiAhSDjgo/jgYvjgoLjga4iXX0sIuaAneOBhOOChOOCiuOAkOOBiuOCguOBhOOChOOCiuOAkSI6eyJzeW4iOlsi5oCd44GE44KE44KKIOOBiuOCguOBhOOChOOCiiIsIuWQjOaDhSDjganjgYbjgZjjgofjgYYiXSwiYW50IjpbXX0sIua4qeazieOAkOOBiuOCk+OBm+OCk+OAkSI6eyJzeW4iOlsi5rip5rOJIOOBiuOCk+OBm+OCkyJdLCJhbnQiOltdfSwi5rip5pqW5YyW44CQ44GK44KT44Gg44KT44GL44CRIjp7InN5biI6WyLmuKnmmpbljJYg44GK44KT44Gg44KT44GLIl0sImFudCI6WyLlr5LlhrfljJYg44GL44KT44KM44GE44GLIl19LCLkvJrnpL7jgJDjgYvjgYTjgZfjgoPjgJEiOnsic3luIjpbIuS8muekviDjgYvjgYTjgZfjgoMiLCLkvIHmpa0g44GN44GO44KH44GGIl0sImFudCI6W119LCLlpInjgYjjgovjgJDjgYvjgYjjgovjgJEiOnsic3luIjpbIuWkieOBiOOCiyDjgYvjgYjjgosiLCLlpInmm7TjgZnjgosg44G444KT44GT44GG44GZ44KLIl0sImFudCI6WyLlpInjgYjjgarjgYQg44GL44GI44Gq44GEIiwi57at5oyB44GZ44KLIOOBhOOBmOOBmeOCiyJdfSwi54Gr5bGx44CQ44GL44GW44KT44CRIjp7InN5biI6WyLngavlsbEg44GL44GW44KTIl0sImFudCI6W119LCLjgqzjgr3jg6rjg7MiOnsic3luIjpbIuOCrOOCveODquODsyDjgYzjgZ3jgorjgpMiXSwiYW50IjpbXX0sIuelnuanmOOAkOOBi+OBv+OBleOBvuOAkSI6eyJzeW4iOlsi56We5qeYIOOBi+OBv+OBleOBviIsIuelniDjgYvjgb8iXSwiYW50IjpbXX0sIuiAg+OBiOOCi+OAkOOBi+OCk+OBjOOBiOOCi+OAkSI6eyJzeW4iOlsi6ICD44GI44KLIOOBi+OCk+OBjOOBiOOCiyIsIuaAneOBhiDjgYrjgoLjgYYiXSwiYW50IjpbXX0sIueSsOWig+OAkOOBi+OCk+OBjeOCh+OBhuOAkSI6eyJzeW4iOlsi55Kw5aKDIOOBi+OCk+OBjeOCh+OBhiJdLCJhbnQiOltdfSwi6Kaz5YWJ5a6i44CQ44GL44KT44GT44GG44GN44KD44GP44CRIjp7InN5biI6WyLoprPlhYnlrqIg44GL44KT44GT44GG44GN44KD44GPIiwi5peF6KGM6ICFIOOCiuOCh+OBk+OBhuOBl+OCgyJdLCJhbnQiOltdfSwi6Kaz5YWJ5Zyw44CQ44GL44KT44GT44GG44Gh44CRIjp7InN5biI6WyLoprPlhYnlnLAg44GL44KT44GT44GG44GhIiwi6Kaz5YWJ44K544Od44OD44OIIOOBi+OCk+OBk+OBhuOBmeOBveOBo+OBqCJdLCJhbnQiOltdfSwi6Zai5b+D44GM44GC44KL44CQ44GL44KT44GX44KT44GM44GC44KL44CRIjp7InN5biI6WyLplqLlv4PjgYzjgYLjgosg44GL44KT44GX44KT44GM44GC44KLIiwi6IiI5ZGz44GM44GC44KLIOOBjeOCh+OBhuOBv+OBjOOBguOCiyJdLCJhbnQiOlsi6Zai5b+D44GM44Gq44GEIOOBi+OCk+OBl+OCk+OBjOOBquOBhCJdfSwi44Kt44Km44KkIjp7InN5biI6W10sImFudCI6W119LCLmsJfmuKnjgJDjgY3jgYrjgpPjgJEiOnsic3luIjpbIuawl+a4qSDjgY3jgYrjgpMiXSwiYW50IjpbXX0sIuawl+WAmeOAkOOBjeOBk+OBhuOAkSI6eyJzeW4iOlsi5rCX5YCZIOOBjeOBk+OBhiJdLCJhbnQiOltdfSwi44GN44Gj44GoIjp7InN5biI6WyLjgY3jgaPjgagg44GN44Gj44GoIiwi5b+F44GaIOOBi+OBquOCieOBmiJdLCJhbnQiOlsi44Gf44G244KTIOOBn+OBtuOCkyJdfSwi44Kt44Oj44Op44Kv44K/44O8Ijp7InN5biI6WyLjgq3jg6Pjg6njgq/jgr/jg7wg44GN44KD44KJ44GP44Gf44O8Il0sImFudCI6W119LCLntabmlpnjgJDjgY3jgoXjgYbjgorjgofjgYbjgJEiOnsic3luIjpbIue1puaWmSDjgY3jgoXjgYbjgorjgofjgYYiLCLntabkuI4g44GN44KF44GG44KIIl0sImFudCI6W119LCLljZTlipvjgZnjgovjgJDjgY3jgofjgYbjgorjgofjgY/jgZnjgovjgJEiOnsic3luIjpbIuWNlOWKm+OBmeOCiyDjgY3jgofjgYbjgorjgofjgY/jgZnjgosiLCLliqnjgZHlkIjjgYYg44Gf44GZ44GR44GC44GGIl0sImFudCI6WyLlj43lr77jgZnjgosg44Gv44KT44Gf44GE44GZ44KLIl19LCLmsJfjgpLjgaTjgZHjgovjgJDjgY3jgpLjgaTjgZHjgovjgJEiOnsic3luIjpbIuawl+OCkuOBpOOBkeOCiyDjgY3jgpLjgaTjgZHjgosiLCLms6jmhI/jgZnjgosg44Gh44KF44GG44GE44GZ44KLIl0sImFudCI6WyLnhKHoppbjgZnjgosg44KA44GX44GZ44KLIl19LCLoqIjnlLvjgJDjgZHjgYTjgYvjgY/jgJEiOnsic3luIjpbIuioiOeUuyDjgZHjgYTjgYvjgY8iLCLkuojlrpog44KI44Gm44GEIl0sImFudCI6W119LCLoqIjnlLvjgpLnq4vjgabjgovjgJDjgZHjgYTjgYvjgY/jgpLjgZ/jgabjgovjgJEiOnsic3luIjpbIuioiOeUu+OCkueri+OBpuOCiyDjgZHjgYTjgYvjgY/jgpLjgZ/jgabjgosiLCLkuojlrprjgpLntYTjgoAg44KI44Gm44GE44KS44GP44KAIl0sImFudCI6W119LCLntYzpqJPjgJDjgZHjgYTjgZHjgpPjgJEiOnsic3luIjpbIue1jOmokyDjgZHjgYTjgZHjgpMiXSwiYW50IjpbXX0sIue1jOmok+OBmeOCi+OAkOOBkeOBhOOBkeOCk+OBmeOCi+OAkSI6eyJzeW4iOlsi57WM6aiT44GZ44KLIOOBkeOBhOOBkeOCk+OBmeOCiyJdLCJhbnQiOltdfSwi5Y6f5Zug44CQ44GS44KT44GE44KT44CRIjp7InN5biI6WyLljp/lm6Ag44GS44KT44GE44KTIiwi55CG55SxIOOCiuOChuOBhiJdLCJhbnQiOlsi57WQ5p6cIOOBkeOBo+OBiyJdfSwi5YWs5a6z44CQ44GT44GG44GM44GE44CRIjp7InN5biI6WyLlhazlrrMg44GT44GG44GM44GEIiwi5rGa5p+TIOOBiuOBm+OCkyJdLCJhbnQiOltdfSwi5bel5aC044CQ44GT44GG44GY44KH44GG44CRIjp7InN5biI6WyLlt6XloLQg44GT44GG44GY44KH44GGIiwi5bel5aC0IOOBk+OBhuOBmOOCh+OBhiJdLCJhbnQiOltdfSwi5rSq5rC044CQ44GT44GG44Ga44GE44CRIjp7InN5biI6WyLmtKrmsLQg44GT44GG44Ga44GEIl0sImFudCI6W119LCLkuqTnlarjgJDjgZPjgYbjgbDjgpPjgJEiOnsic3luIjpbIuS6pOeVqiDjgZPjgYbjgbDjgpMiLCLmtL7lh7rmiYAg44Gv44GX44KF44Gk44GY44KHIl0sImFudCI6W119LCLlv4PjgJDjgZPjgZPjgo3jgJEiOnsic3luIjpbIuW/gyDjgZPjgZPjgo0iLCLmsJfmjIHjgaEg44GN44KC44GhIl0sImFudCI6W119LCLkuovjgJDjgZPjgajjgJEiOnsic3luIjpbIuS6iyDjgZPjgagiLCLlh7rmnaXkuosg44Gn44GN44GU44GoIl0sImFudCI6W119LCLlm7DjgovjgJDjgZPjgb7jgovjgJEiOnsic3luIjpbIuWbsOOCiyDjgZPjgb7jgosiLCLmgqnjgoAg44Gq44KE44KAIl0sImFudCI6WyLliqnjgYvjgosg44Gf44GZ44GL44KLIl19LCLlo4rjgozjgovjgJDjgZPjgo/jgozjgovjgJEiOnsic3luIjpbIuWjiuOCjOOCiyDjgZPjgo/jgozjgosiLCLnoLTmkI3jgZnjgosg44Gv44Gd44KT44GZ44KLIl0sImFudCI6WyLnm7Tjgosg44Gq44GK44KLIl19LCLjgrPjg7Pjg53jgrnjg4giOnsic3luIjpbXSwiYW50IjpbXX0sIuaOouOBmeOAkOOBleOBjOOBmeOAkSI6eyJzeW4iOlsi5o6i44GZIOOBleOBjOOBmSIsIuaNnOOBmSDjgZXjgYzjgZkiXSwiYW50IjpbIuimi+OBpOOBkeOCiyDjgb/jgaTjgZHjgosiXX0sIuS4i+OBjOOCi+OAkOOBleOBjOOCi+OAkSI6eyJzeW4iOlsi5LiL44GM44KLIOOBleOBjOOCiyIsIuS9juS4i+OBmeOCiyDjgabjgYTjgYvjgZnjgosiXSwiYW50IjpbIuS4iuOBjOOCiyDjgYLjgYzjgosiXX0sIuW3ruWIpeOAkOOBleOBueOBpOOAkSI6eyJzeW4iOlsi5beu5YilIOOBleOBueOBpCJdLCJhbnQiOlsi5bmz562JIOOBs+OCh+OBhuOBqeOBhiJdfSwi5beu5Yil44GZ44KL44CQ44GV44G544Gk44GZ44KL44CRIjp7InN5biI6WyLlt67liKXjgZnjgosg44GV44G544Gk44GZ44KLIl0sImFudCI6WyLlubPnrYnjgavmibHjgYYg44Gz44KH44GG44Gp44GG44Gr44GC44Gk44GL44GGIl19LCLnlKPmpa3jgJDjgZXjgpPjgY7jgofjgYbjgJEiOnsic3luIjpbIueUo+alrSDjgZXjgpPjgY7jgofjgYYiXSwiYW50IjpbXX0sIuizm+aIkOOBmeOCi+OAkOOBleOCk+OBm+OBhOOBmeOCi+OAkSI6eyJzeW4iOlsi6LOb5oiQ44GZ44KLIOOBleOCk+OBm+OBhOOBmeOCiyJdLCJhbnQiOlsi5Y+N5a++44GZ44KLIOOBr+OCk+OBn+OBhOOBmeOCiyJdfSwi44K444Kn44Oz44OA44O8Ijp7InN5biI6W10sImFudCI6W119LCLlnLDpnIfjgJDjgZjjgZfjgpPjgJEiOnsic3luIjpbIuWcsOmchyDjgZjjgZfjgpMiXSwiYW50IjpbXX0sIummlumDveOAkOOBl+OCheOBqOOAkSI6eyJzeW4iOlsi6aaW6YO9IOOBl+OCheOBqCJdLCJhbnQiOltdfSwi6LOH5rqQ44CQ44GX44GS44KT44CRIjp7InN5biI6WyLos4fmupAg44GX44GS44KTIl0sImFudCI6W119LCLoh6rnhLbjgJDjgZfjgZzjgpPjgJEiOnsic3luIjpbIuiHqueEtiDjgZfjgZzjgpMiXSwiYW50IjpbIuS6uuW3pSDjgZjjgpPjgZPjgYYiXX0sIuWztuOAkOOBl+OBvuOAkSI6eyJzeW4iOlsi5bO2IOOBl+OBviJdLCJhbnQiOltdfSwi5bO25Zu944CQ44GX44G+44GQ44Gr44CRIjp7InN5biI6WyLls7blm70g44GX44G+44GQ44GrIl0sImFudCI6WyLlpKfpmbjlm70g44Gf44GE44KK44GP44GT44GPIl19LCLnpL7kvJrjgJDjgZfjgoPjgYvjgYTjgJEiOnsic3luIjpbIuekvuS8miDjgZfjgoPjgYvjgYQiXSwiYW50IjpbXX0sIuiHqueUseOAkOOBmOOChuOBhuOAkSI6eyJzeW4iOlsi6Ieq55SxIOOBmOOChuOBhiIsIuiHqueUsSDjgZjjgobjgYYiXSwiYW50IjpbIuS4jeiHqueUsSDjgbXjgZjjgobjgYYiXX0sIuWul+aVmeOAkOOBl+OCheOBhuOBjeOCh+OBhuOAkSI6eyJzeW4iOlsi5a6X5pWZIOOBl+OCheOBhuOBjeOCh+OBhiJdLCJhbnQiOltdfSwi5Y2B5YiG44CQ44GY44KF44GG44G244KT44CRIjp7InN5biI6WyLljYHliIYg44GY44KF44GG44G244KTIiwi5YWF5YiGIOOBmOOCheOBhuOBtuOCkyJdLCJhbnQiOlsi5LiN6LazIOOBteOBneOBjyJdfSwi5oOF5aCx44CQ44GY44KH44GG44G744GG44CRIjp7InN5biI6WyLmg4XloLEg44GY44KH44GG44G744GGIl0sImFudCI6W119LCLlsIbmnaXjgJDjgZfjgofjgYbjgonjgYTjgJEiOnsic3luIjpbIuWwhuadpSDjgZfjgofjgYbjgonjgYQiLCLmnKrmnaUg44G/44KJ44GEIl0sImFudCI6WyLpgY7ljrsg44GL44GTIl19LCLoqr/jgbnjgovjgJDjgZfjgonjgbnjgovjgJEiOnsic3luIjpbIuiqv+OBueOCiyDjgZfjgonjgbnjgosiLCLoqr/mn7vjgZnjgosg44Gh44KH44GG44GV44GZ44KLIl0sImFudCI6W119LCLkurrlj6PjgJDjgZjjgpPjgZPjgYbjgJEiOnsic3luIjpbIuS6uuWPoyDjgZjjgpPjgZPjgYYiXSwiYW50IjpbXX0sIueUn+a0u+OBmeOCi+OAkOOBm+OBhOOBi+OBpOOBmeOCi+OAkSI6eyJzeW4iOlsi55Sf5rS744GZ44KLIOOBm+OBhOOBi+OBpOOBmeOCiyIsIuaaruOCieOBmSDjgY/jgonjgZkiXSwiYW50IjpbXX0sIuaUv+W6nOOAkOOBm+OBhOOBteOAkSI6eyJzeW4iOlsi5pS/5bqcIOOBm+OBhOOBtSJdLCJhbnQiOltdfSwi5LiW55WM44CQ44Gb44GL44GE44CRIjp7InN5biI6WyLkuJbnlYwg44Gb44GL44GEIiwi5Zyw55CDIOOBoeOBjeOCheOBhiJdLCJhbnQiOltdfSwi6LKs5Lu744CQ44Gb44GN44Gr44KT44CRIjp7InN5biI6WyLosqzku7sg44Gb44GN44Gr44KTIl0sImFudCI6W119LCLkuJbku6PjgJDjgZvjgaDjgYTjgJEiOnsic3luIjpbIuS4luS7oyDjgZvjgaDjgYQiXSwiYW50IjpbXX0sIue1tuWvvuOBq+OAkOOBnOOBo+OBn+OBhOOBq+OAkSI6eyJzeW4iOlsi57W25a++44GrIOOBnOOBo+OBn+OBhOOBqyIsIuW/heOBmiDjgYvjgarjgonjgZoiXSwiYW50IjpbIuOBn+OBtuOCkyDjgZ/jgbbjgpMiXX0sIuWkp+S6i+OBq+OBmeOCi+OAkOOBoOOBhOOBmOOBq+OBmeOCi+OAkSI6eyJzeW4iOlsi5aSn5LqL44Gr44GZ44KLIOOBoOOBhOOBmOOBq+OBmeOCiyIsIuWkp+WIh+OBq+OBmeOCiyDjgZ/jgYTjgZvjgaTjgavjgZnjgosiXSwiYW50IjpbIueyl+acq+OBq+OBmeOCiyDjgZ3jgb7jgaTjgavjgZnjgosiXX0sIuWPsOmiqOOAkOOBn+OBhOOBteOBhuOAkSI6eyJzeW4iOlsi5Y+w6aKoIOOBn+OBhOOBteOBhiJdLCJhbnQiOltdfSwi5Yqp44GR5ZCI44GG44CQ44Gf44GZ44GR44GC44GG44CRIjp7InN5biI6WyLliqnjgZHlkIjjgYYg44Gf44GZ44GR44GC44GGIiwi5Y2U5Yqb44GZ44KLIOOBjeOCh+OBhuOCiuOCh+OBj+OBmeOCiyJdLCJhbnQiOlsi5LqJ44GGIOOBguOCieOBneOBhiJdfSwi44Gf44GgIjp7InN5biI6WyLnhKHmlpkg44KA44KK44KH44GGIl0sImFudCI6WyLmnInmlpkg44KG44GG44KK44KH44GGIl19LCLjgZ/jgbbjgpMiOnsic3luIjpbIuOBn+OBtuOCkyDjgZ/jgbbjgpMiLCLlpJrliIYg44Gf44G244KTIl0sImFudCI6WyLjgY3jgaPjgagg44GN44Gj44GoIl19LCLlpJrmlofljJbjgJDjgZ/jgbbjgpPjgYvjgJEiOnsic3luIjpbIuWkmuaWh+WMliDjgZ/jgbbjgpPjgYsiXSwiYW50IjpbIuWNmOS4gOaWh+WMliDjgZ/jgpPjgYTjgaTjgbbjgpPjgYsiXX0sIuiyr+OCgeOCi+OAkOOBn+OCgeOCi+OAkSI6eyJzeW4iOlsi6LKv44KB44KLIOOBn+OCgeOCiyIsIuiThOOBiOOCiyDjgZ/jgY/jgo/jgYjjgosiXSwiYW50IjpbIuS9v+OBhiDjgaTjgYvjgYYiXX0sIuiqsOOBi+OAkOOBoOOCjOOBi+OAkSI6eyJzeW4iOlsi6Kqw44GLIOOBoOOCjOOBiyJdLCJhbnQiOlsi6Kqw44KCIOOBoOOCjOOCgiJdfSwi6Kqw44Gn44KC44CQ44Gg44KM44Gn44KC44CRIjp7InN5biI6WyLoqrDjgafjgoIg44Gg44KM44Gn44KCIl0sImFudCI6W119LCLoqrDjgoLjgJDjgaDjgozjgoLjgJEiOnsic3luIjpbIuiqsOOCgiDjgaDjgozjgoIiXSwiYW50IjpbIuiqsOOBiyDjgaDjgozjgYsiXX0sIuWcsOeQg+OAkOOBoeOBjeOCheOBhuOAkSI6eyJzeW4iOlsi5Zyw55CDIOOBoeOBjeOCheOBhiJdLCJhbnQiOltdfSwi5Zyw5pa544CQ44Gh44G744GG44CRIjp7InN5biI6WyLlnLDmlrkg44Gh44G744GGIiwi55Sw6IiOIOOBhOOBquOBiyJdLCJhbnQiOlsi6YO95LyaIOOBqOOBi+OBhCJdfSwi44Gk44KGIjp7InN5biI6WyLmooXpm6gg44Gk44KGIl0sImFudCI6W119LCLjgafjgY3jgovjgaDjgZEiOnsic3luIjpbIuOBp+OBjeOCi+OBoOOBkSDjgafjgY3jgovjgaDjgZEiLCLjgarjgovjgbnjgY8g44Gq44KL44G544GPIl0sImFudCI6W119LCLlh7rlj6PjgJDjgafjgZDjgaHjgJEiOnsic3luIjpbIuWHuuWPoyDjgafjgZDjgaEiXSwiYW50IjpbIuWFpeWPoyDjgYTjgorjgZDjgaEiXX0sIuODhuOCr+ODjuODreOCuOODvCI6eyJzeW4iOlsi44OG44Kv44OO44Ot44K444O8IOOBpuOBj+OBruOCjeOBmOODvCIsIuaKgOihkyDjgY7jgZjjgoXjgaQiXSwiYW50IjpbXX0sIumDveS8muOAkOOBqOOBi+OBhOOAkSI6eyJzeW4iOlsi6YO95LyaIOOBqOOBi+OBhCIsIumDveW4giDjgajjgZciXSwiYW50IjpbIueUsOiIjiDjgYTjgarjgYsiLCLlnLDmlrkg44Gh44G744GGIl19LCLnibnjgavjgJDjgajjgY/jgavjgJEiOnsic3luIjpbIueJueOBqyDjgajjgY/jgasiLCLnibnjgasg44Go44GP44GrIl0sImFudCI6WyLkuIDoiKznmoTjgasg44GE44Gj44Gx44KT44Gm44GN44GrIl19LCLjganjgZPjgYsiOnsic3luIjpbIuOBqeOBk+OBiyDjganjgZPjgYsiXSwiYW50IjpbIuOBqeOBk+OCgiDjganjgZPjgoIiXX0sIuOBqeOBk+OBp+OCgiI6eyJzeW4iOlsi44Gp44GT44Gn44KCIOOBqeOBk+OBp+OCgiJdLCJhbnQiOltdfSwi44Gp44GT44KCIjp7InN5biI6WyLjganjgZPjgoIg44Gp44GT44KCIl0sImFudCI6WyLjganjgZPjgYsg44Gp44GT44GLIl19LCLliqrlipvjgZnjgovjgJDjganjgorjgofjgY/jgZnjgovjgJEiOnsic3luIjpbIuWKquWKm+OBmeOCiyDjganjgorjgofjgY/jgZnjgosiLCLpoJHlvLXjgosg44GM44KT44Gw44KLIl0sImFudCI6WyLmgKDjgZHjgosg44Gq44G+44GR44KLIl19LCLnm7TjgZnjgJDjgarjgYrjgZnjgJEiOnsic3luIjpbIuebtOOBmSDjgarjgYrjgZkiLCLkv67nkIbjgZnjgosg44GX44KF44GG44KK44GZ44KLIl0sImFudCI6WyLlo4rjgZkg44GT44KP44GZIl19LCLjgarjgavjgYsiOnsic3luIjpbIuS9leOBiyDjgarjgavjgYsiXSwiYW50IjpbIuS9leOCgiDjgarjgavjgoIiXX0sIuOBquOBq+OCgiI6eyJzeW4iOlsi5L2V44KCIOOBquOBq+OCgiJdLCJhbnQiOlsi5L2V44GLIOOBquOBq+OBiyJdfSwi44Gq44KT44Gn44KCIjp7InN5biI6WyLkvZXjgafjgoIg44Gq44KT44Gn44KCIl0sImFudCI6W119LCLjgavjgaTjgYTjgaYiOnsic3luIjpbIuOBq+OBpOOBhOOBpiDjgavjgaTjgYTjgaYiXSwiYW50IjpbXX0sIuOBq+OCiOOBo+OBpiI6eyJzeW4iOlsi44Gr44KI44Gj44GmIOOBq+OCiOOBo+OBpiJdLCJhbnQiOltdfSwi44Gu44GL44KP44KK44GrIjp7InN5biI6WyLku6Pjgo/jgorjgasg44GL44KP44KK44GrIl0sImFudCI6W119LCLkuZfjgormj5vjgYjjgovjgJDjga7jgorjgYvjgYjjgovjgJEiOnsic3luIjpbIuS5l+OCiuaPm+OBiOOCiyDjga7jgorjgYvjgYjjgosiLCLkuZfjgormj5vjgYjjgosg44Gu44KK44GL44GI44KLIl0sImFudCI6W119LCLljZrnianppKjjgJDjga/jgY/jgbbjgaTjgYvjgpPjgJEiOnsic3luIjpbIuWNmueJqemkqCDjga/jgY/jgbbjgaTjgYvjgpMiXSwiYW50IjpbXX0sIuOBr+OBo+OBjeOCiiI6eyJzeW4iOlsi44Gv44Gj44GN44KKIOOBr+OBo+OBjeOCiiIsIuaYjueiuuOBqyDjgoHjgYTjgYvjgY/jgasiXSwiYW50IjpbIuabluaYp+OBqyDjgYLjgYTjgb7jgYTjgasiXX0sIuWPjeWvvuOAkOOBr+OCk+OBn+OBhOOAkSI6eyJzeW4iOlsi5Y+N5a++IOOBr+OCk+OBn+OBhCJdLCJhbnQiOlsi6LOb5oiQIOOBleOCk+OBm+OBhCJdfSwi5Y+N5a++44GZ44KL44CQ44Gv44KT44Gf44GE44GZ44KL44CRIjp7InN5biI6WyLlj43lr77jgZnjgosg44Gv44KT44Gf44GE44GZ44KLIl0sImFudCI6WyLos5vmiJDjgZnjgosg44GV44KT44Gb44GE44GZ44KLIl19LCLjg5Pjgrjjg43jgrkiOnsic3luIjpbIuODk+OCuOODjeOCuSDjgbPjgZjjga3jgZkiLCLllYblo7Ig44GX44KH44GG44Gw44GEIl0sImFudCI6W119LCLmi77jgYbjgJDjgbLjgo3jgYbjgJEiOnsic3luIjpbIuaLvuOBhiDjgbLjgo3jgYYiLCLmi77jgYTkuIrjgZLjgosg44Gy44KN44GE44GC44GS44KLIl0sImFudCI6WyLmjajjgabjgosg44GZ44Gm44KLIl19LCLpmY3jgovjgJDjgbXjgovjgJEiOnsic3luIjpbIumZjeOCiyDjgbXjgosiXSwiYW50IjpbIuaZtOOCjOOCiyDjga/jgozjgosiXX0sIuODleODrOODs+ODieODquODvCjjgaopIjp7InN5biI6WyLjg5Xjg6zjg7Pjg4njg6rjg7wg44G144KM44KT44Gp44KK44O8Iiwi6Kaq5YiHIOOBl+OCk+OBm+OBpCJdLCJhbnQiOlsi54Sh5oSb5oOzIOOBtuOBguOBhOOBneOBhiJdfSwi5bmz5ZKM44CQ44G444GE44KP44CRIjp7InN5biI6WyLlubPlkowg44G444GE44KPIl0sImFudCI6WyLmiKbkuokg44Gb44KT44Gd44GGIl19LCLjg53jg4Pjg5fjgqvjg6vjg4Hjg6Pjg7wiOnsic3luIjpbIuODneODg+ODl+OCq+ODq+ODgeODo+ODvCDjgb3jgaPjgbfjgYvjgovjgaHjgoPjg7wiXSwiYW50IjpbXX0sIuimi+OBpOOBkeOCi+OAkOOBv+OBpOOBkeOCi+OAkSI6eyJzeW4iOlsi6KaL44Gk44GR44KLIOOBv+OBpOOBkeOCiyIsIueZuuimi+OBmeOCiyDjga/jgaPjgZHjgpPjgZnjgosiXSwiYW50IjpbIuimi+WkseOBhiDjgb/jgYbjgZfjgarjgYYiXX0sIuOCguOBhuS4gOW6puOAkOOCguOBhuOBhOOBoeOBqeOAkSI6eyJzeW4iOlsi44KC44GG5LiA5bqmIOOCguOBhuOBhOOBoeOBqSIsIuWGjeOBsyDjgbXjgZ/jgZ/jgbMiXSwiYW50IjpbXX0sIuaMgeOBpOOAkOOCguOBpOOAkSI6eyJzeW4iOlsi5oyB44GkIOOCguOBpCIsIuaJgOaMgeOBmeOCiyDjgZfjgofjgZjjgZnjgosiXSwiYW50IjpbXX0sIueJqeOAkOOCguOBruOAkSI6eyJzeW4iOlsi54mpIOOCguOBriIsIuWTgeeJqSDjgZfjgarjgoLjga4iXSwiYW50IjpbXX0sIuOChOOBo+OBseOCiiI6eyJzeW4iOlsi44KE44Gj44Gx44KKIOOChOOBo+OBseOCiiIsIuOChOOBr+OCiiDjgoTjga/jgooiXSwiYW50IjpbXX0sIuOChOOCiyI6eyJzeW4iOlsi44KE44KLIOOChOOCiyIsIuOBmeOCiyDjgZnjgosiXSwiYW50IjpbXX0sIuWkouOAkOOChuOCgeOAkSI6eyJzeW4iOlsi5aSiIOOChuOCgSJdLCJhbnQiOlsi54++5a6fIOOBkuOCk+OBmOOBpCJdfSwi44Ot44Oc44OD44OIIjp7InN5biI6WyLjg63jg5zjg4Pjg4gg44KN44G844Gj44GoIl0sImFudCI6W119LCLliIbjgZHjgovjgJDjgo/jgZHjgovjgJEiOnsic3luIjpbIuWIhuOBkeOCiyDjgo/jgZHjgosiLCLliIblibLjgZnjgosg44G244KT44GL44Gk44GZ44KLIl0sImFudCI6WyLjgb7jgajjgoHjgosg44G+44Go44KB44KLIl19LCLvvZ7lt53jgJDvvZ7jgYzjgo/jgJEiOnsic3luIjpbIuW3nSDjgYvjgo8iXSwiYW50IjpbXX0sIu+9nua5luOAkO+9nuOBk+OAkSI6eyJzeW4iOlsi5rmWIOOBv+OBmuOBhuOBvyJdLCJhbnQiOltdfSwi772e5bGx44CQ772e44GV44KT44CRIjp7InN5biI6WyLlsbEg44KE44G+Il0sImFudCI6W119LCLvvZ7luqbjgJDvvZ7jganjgJEiOnsic3luIjpbIuW6piDjgakiXSwiYW50IjpbXX0sIu+9nuWbnuOAkO+9nuOBi+OBhOOAkSI6eyJzeW4iOlsi5ZueIOOBi+OBhCJdLCJhbnQiOltdfX0="))));
+
+function stripRomaji(text) {
+  text = text.replace(/\s*\([^)]*\)/g, '');
+  text = text.replace(/\s+[A-Z].*/g, '');
+  return text.trim();
+}
+
+// ============================================================
+// REST OF THE JAVASCRIPT (DO NOT MODIFY)
+// ============================================================
+const LS = {
+  get(key, fallback) {
+    try { const v = localStorage.getItem(key); return v !== null ? v : fallback; }
+    catch(e) { return fallback; }
+  },
+  set(key, val) {
+    try { localStorage.setItem(key, val); } catch(e) {}
+  }
+};
+
+let isPlayingAudio = false;
+
+function getBaseWord(word) { if (!word) return word; const idx = word.indexOf('【'); return idx !== -1 ? word.substring(0, idx) : word; }
+function extractAnswer(word) { const bracketIdx = word.indexOf('【'); if (bracketIdx !== -1) { const endIdx = word.indexOf('】', bracketIdx); return word.substring(bracketIdx + 1, endIdx); } return word; }
+
+function isHiraganaKatakana(str) { if (!str) return false; return /^[ぁ-ゟァ-ヺ ー々〆〤]+$/.test(str); }
+
+
+function buildGroups() {
+  const n = VOCAB.length;
+  const wordsPerGroup = 10;
+  const numGroups = Math.ceil(n / wordsPerGroup);
+  const groups = [];
+  
+  for (let i = 0; i < numGroups; i++) {
+    const start = i * wordsPerGroup;
+    const end = Math.min(start + wordsPerGroup, n);
+    groups.push(VOCAB.slice(start, end));
+  }
+  
+  return groups;
+}
+
+const GROUPS = buildGroups();
+const NUM_GROUPS = GROUPS.length;
+
+const S = {
+  gIdx: 0,
+  wIdx: 0,
+  sentTab: 0,
+  starred: new Set(JSON.parse(LS.get('wtb_starred', '[]'))),
+  sentences: JSON.parse(LS.get('wtb_sentences', '{}')),
+  quiz: null,
+  quizDone: {},
+  sqQuiz: null,
+};
+
+function saveStarred() { LS.set('wtb_starred', JSON.stringify([...S.starred])); }
+function saveSentences() { LS.set('wtb_sentences', JSON.stringify(S.sentences)); }
+
+function escReg(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+function highlightWord(text, word) {
+  const e = escReg(word);
+  const re1 = new RegExp('\\b(' + e + ')\\b', 'gi');
+  if (re1.test(text)) return text.replace(re1, '<span class="hl">$1</span>');
+  const root = escReg(word.substring(0, Math.max(4, Math.floor(word.length * 0.72))));
+  const re2 = new RegExp('\\b(' + root + '\\w*)\\b', 'gi');
+  return text.replace(re2, '<span class="hl">$1</span>');
+}
+
+function blankWord(text, word) {
+  const blank = '<span class="blank">___________</span>';
+  const e = escReg(word);
+  const re1 = new RegExp('\\b' + e + '\\b', 'gi');
+  if (re1.test(text)) return text.replace(re1, blank);
+  const root = escReg(word.substring(0, Math.max(4, Math.floor(word.length * 0.72))));
+  const re2 = new RegExp('\\b' + root + '\\w*\\b', 'gi');
+  return text.replace(re2, blank);
+}
+
+function chapterShort(ch) {
+  const m = ch.match(/Part ([IVX]+)[,\s]+Chapter (\d+)/i);
+  if (m) return 'Pt.' + m[1] + ' · Ch.' + m[2];
+  return ch;
+}
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+let toastTimer = null;
+function toast(msg, type = '') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'show' + (type ? ' ' + type : '');
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { t.className = ''; }, 2200);
+}
+
+let currentAudio = null; // Track currently playing audio
+
+function speak(word) {
+  try {
+    if (isPlayingAudio) return; // Prevent concurrent plays
+    
+    if (!word || !word.trim()) return;
+    word = stripRomaji(word);
+    if (!word || !word.trim()) return;
+    
+    if ('speechSynthesis' in window) {
+      // Cancel any existing speech before starting new one
+      window.speechSynthesis.cancel();
+      isPlayingAudio = true;
+      
+      const u = new SpeechSynthesisUtterance(word);
+      u.lang = 'ja-JP';
+      u.rate = 0.85;
+      u.pitch = 1;
+      u.volume = 1;
+      u.onstart = () => { isPlayingAudio = true; };
+      u.onend = () => { isPlayingAudio = false; };
+      u.onerror = () => { isPlayingAudio = false; };
+      
+      // Small delay to ensure cancel completes before speak
+      setTimeout(() => {
+        window.speechSynthesis.speak(u);
+      }, 50);
+    }
+  } catch(e) {
+    isPlayingAudio = false;
+    console.error('speak() error:', e);
+  }
+}
+function playCurrentSentenceAudio() {
+  try {
+    if (isPlayingAudio) return; // Prevent concurrent plays
+    
+    const sentEn = document.getElementById('sentEn');
+    if (sentEn && sentEn.textContent && sentEn.textContent.trim() !== '—') {
+      let text = sentEn.textContent.replace(/<[^>]*>/g, '');
+      text = stripRomaji(text);
+      if (text.trim()) {
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+          isPlayingAudio = true;
+          
+          const u = new SpeechSynthesisUtterance(text);
+          u.lang = 'ja-JP';
+          u.rate = 0.85;
+          u.pitch = 1;
+          u.volume = 1;
+          u.onstart = () => { isPlayingAudio = true; };
+          u.onend = () => { isPlayingAudio = false; };
+          u.onerror = () => { isPlayingAudio = false; };
+          
+          setTimeout(() => {
+            window.speechSynthesis.speak(u);
+          }, 50);
+        }
+      }
+    }
+  } catch (e) {
+    isPlayingAudio = false;
+  }
+}
+
+function render() {
+  if (!GROUPS.length || !GROUPS[S.gIdx] || !GROUPS[S.gIdx][S.wIdx]) {
+    console.error('No data available');
+    return;
+  }
+  
+  const group = GROUPS[S.gIdx];
+  const entry = group[S.wIdx];
+  const isStarred = S.starred.has(entry.word);
+
+  document.getElementById('groupNumDisplay').textContent = (S.gIdx + 1) + ' / ' + NUM_GROUPS;
+  document.getElementById('prevGroupBtn').disabled = S.gIdx === 0;
+  document.getElementById('nextGroupBtn').disabled = S.gIdx === NUM_GROUPS - 1;
+  renderGroupDots();
+
+  document.getElementById('wordNumDisplay').textContent = S.wIdx + 1;
+  document.getElementById('groupSizeDisplay').textContent = group.length;
+  document.getElementById('prevWordBtn').disabled = S.wIdx === 0;
+  document.getElementById('nextWordBtn').disabled = S.wIdx === group.length - 1;
+
+  const sb = document.getElementById('starBtn');
+  sb.textContent = isStarred ? '★' : '☆';
+  sb.classList.toggle('starred', isStarred);
+
+  document.getElementById('wordDisplay').textContent = entry.word;
+  document.getElementById('pronDisplay').textContent = '[' + entry.pron + ']';
+  
+  // Remove any existing badge first to prevent duplicates
+  const oldBadge = document.querySelector('#pronDisplay + .badge-pos');
+  if (oldBadge) oldBadge.remove();
+  
+  // Create new badge
+  const posBadgeEl = document.createElement('span');
+  posBadgeEl.className = 'badge badge-pos';
+  posBadgeEl.textContent = '[' + (entry.part_of_speech || '') + ']';
+  posBadgeEl.style.display = 'inline-block';
+  posBadgeEl.style.marginLeft = '8px';
+  document.getElementById('pronDisplay').insertAdjacentElement('afterend', posBadgeEl);
+  
+  document.getElementById('defEn').textContent = entry.def_en;
+  document.getElementById('defZh').textContent = entry.def_zh;
+
+  document.getElementById('tabNovel').classList.toggle('active', S.sentTab === 0);
+  document.getElementById('tabAI').classList.toggle('active', S.sentTab === 1);
+
+  let sentEn, sentZh, sentSource;
+  if (S.sentTab === 0) {
+    sentEn = highlightWord(entry.quote_en, entry.word);
+    sentZh = entry.quote_zh;
+    sentSource = '— ' + BOOK_CONFIG.author + ', <em>' + BOOK_CONFIG.bookName + '</em> · ' + entry.chapter;
+  } else {
+    sentEn = highlightWord(entry.ex_en, entry.word);
+    sentZh = entry.ex_zh;
+    sentSource = '— AI Example · Thematically aligned with <em>' + BOOK_CONFIG.bookName + '</em>';
+  }
+  document.getElementById('sentEn').innerHTML = sentEn;
+  document.getElementById('sentZh').textContent = sentZh;
+  document.getElementById('sentSource').innerHTML = sentSource;
+
+  const sa = SYNAN[entry.word] || { syn: [], ant: [] };
+  document.getElementById('synChips').innerHTML = sa.syn.map(w => `<span class="synan-chip syn">${w}</span>`).join('');
+  document.getElementById('antChips').innerHTML = sa.ant.map(w => `<span class="synan-chip ant">${w}</span>`).join('');
+  document.getElementById('synanBlock').style.display = (sa.syn.length || sa.ant.length) ? 'flex' : 'none';
+
+  const tabFlash = document.getElementById('tabFlashcard'); if (tabFlash) tabFlash.classList.toggle('active', S.sentTab === 2);
+  const flashcardContainer = document.getElementById('flashcardContainer');
+  if (flashcardContainer) {
+    flashcardContainer.style.display = S.sentTab === 2 ? 'block' : 'none';
+    if (S.sentTab === 2) renderFlashcard(); //renderFlashcard();
+  }
+  document.getElementById('sentenceContent').style.display = S.sentTab === 2 ? 'none' : 'block';
+  if (S.sentTab === 2) renderFlashcard(); //renderFlashcard();
+
+  renderStarredSection();
+  renderMySentences();
+
+  document.getElementById('quizStartDesc').textContent =
+    'Test yourself on Group ' + (S.gIdx + 1) + '. Choose the word, then spell it.';
+  const done = S.quizDone[S.gIdx];
+  const badge = document.getElementById('quizScoreBadge');
+  if (done !== undefined) {
+    badge.style.display = 'inline-block';
+    badge.textContent = done.score + ' / ' + done.total + ' correct';
+  } else {
+    badge.style.display = 'none';
+  }
+
+  const cnt = S.starred.size;
+  document.getElementById('starredCount').textContent = cnt;
+  document.getElementById('starredCountHeader').textContent = cnt;
+}
+
+function renderGroupDots() {
+  const wrap = document.getElementById('groupDots');
+  wrap.innerHTML = '';
+  for (let i = 0; i < NUM_GROUPS; i++) {
+    const d = document.createElement('div');
+    d.className = 'group-dot' +
+      (i === S.gIdx ? ' active' : '') +
+      (S.quizDone[i] !== undefined && i !== S.gIdx ? ' done' : '');
+    wrap.appendChild(d);
+  }
+}
+
+function renderStarredSection() {
+  const list = document.getElementById('starredList');
+  list.innerHTML = '';
+  if (S.starred.size === 0) {
+    list.innerHTML = '<div class="starred-empty">No starred words yet. Tap ☆ on any word to save it.</div>';
+  } else {
+    [...S.starred].forEach(word => {
+      const idx = VOCAB.findIndex(v => v.word === word);
+      if (idx === -1) return;
+      const chip = document.createElement('button');
+      chip.className = 'starred-chip';
+      chip.textContent = word;
+      chip.title = VOCAB[idx].def_en;
+      chip.addEventListener('click', () => navigateToWord(idx));
+      list.appendChild(chip);
+    });
+  }
+  renderStarredQuizStart();
+}
+
+function renderMySentences() {
+  const word = GROUPS[S.gIdx][S.wIdx].word;
+  const sents = S.sentences[word] || [];
+  const max = 3;
+
+  const counter = document.getElementById('mySentCounter');
+  counter.textContent = sents.length + ' / ' + max;
+  counter.className = 'my-sent-counter' + (sents.length >= max ? ' full' : '');
+
+  const input = document.getElementById('mySentInput');
+  const saveBtn = document.getElementById('mySentSaveBtn');
+  input.disabled = sents.length >= max;
+  saveBtn.disabled = sents.length >= max;
+  input.placeholder = sents.length >= max
+    ? 'Maximum 3 sentences saved ✓'
+    : 'Write your own sentence using "' + word + '"…';
+
+  const list = document.getElementById('mySentList');
+  list.innerHTML = '';
+  sents.forEach((text, i) => {
+    const item = document.createElement('div');
+    item.className = 'my-sent-item';
+    item.innerHTML =
+      '<span class="my-sent-num">' + (i + 1) + '</span>' +
+      '<span class="my-sent-text">' + escapeHTML(text) + '</span>' +
+      '<button class="my-sent-del" data-idx="' + i + '" title="Delete">✕</button>';
+    item.querySelector('.my-sent-del').addEventListener('click', () => deleteSentence(word, i));
+    list.appendChild(item);
+  });
+}
+
+function escapeHTML(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function addSentence() {
+  const word = GROUPS[S.gIdx][S.wIdx].word;
+  const input = document.getElementById('mySentInput');
+  const text = input.value.trim();
+  if (!text) { toast('Please write a sentence first.', ''); return; }
+  if (!S.sentences[word]) S.sentences[word] = [];
+  if (S.sentences[word].length >= 3) { toast('Max 3 sentences per word.', ''); return; }
+  const wordLower = word.toLowerCase();
+  const rootLower = wordLower.substring(0, Math.max(4, Math.floor(wordLower.length * 0.72)));
+  if (!text.toLowerCase().includes(rootLower)) {
+    toast('💡 Try to use "' + word + '" in your sentence!', '');
+  }
+  S.sentences[word].push(text);
+  saveSentences();
+  input.value = '';
+  renderMySentences();
+  toast('✓ Sentence saved!', 'good');
+}
+
+function deleteSentence(word, idx) {
+  if (!S.sentences[word]) return;
+  S.sentences[word].splice(idx, 1);
+  if (S.sentences[word].length === 0) delete S.sentences[word];
+  saveSentences();
+  renderMySentences();
+}
+
+function renderStarredQuizStart() {
+  const count = S.starred.size;
+  const canStart = count >= 5;
+  document.getElementById('sqDesc').textContent = canStart
+    ? 'Quiz yourself on all ' + count + ' starred words.'
+    : 'Keep starring words to unlock your personal quiz.';
+  document.getElementById('sqStartBtn').style.display = canStart ? 'inline-block' : 'none';
+  document.getElementById('sqUnlockHint').style.display = canStart ? 'none' : 'block';
+  document.getElementById('sqStarredCount').textContent = count;
+  document.getElementById('sqStartArea').style.display = 'block';
+  document.getElementById('sqQuestionArea').style.display = 'none';
+  document.getElementById('sqResult').style.display = 'none';
+}
+
+function startStarredQuiz() {
+  const starredWords = [...S.starred];
+  if (starredWords.length < 5) return;
+
+  const entries = starredWords
+    .map(w => VOCAB.find(v => v.word === w))
+    .filter(Boolean);
+
+  const questions = shuffle(entries);
+  S.sqQuiz = { questions, qIdx: 0, score: 0, answered: false };
+
+  document.getElementById('sqStartArea').style.display = 'none';
+  document.getElementById('sqQuestionArea').style.display = 'block';
+  document.getElementById('sqResult').style.display = 'none';
+  renderSQQuestion();
+}
+
+function renderSQQuestion() {
+  const q = S.sqQuiz;
+  const entry = q.questions[q.qIdx];
+  const total = q.questions.length;
+
+  document.getElementById('sqQNum').textContent = 'Question ' + (q.qIdx + 1) + ' / ' + total;
+  document.getElementById('sqProgressFill').style.width = ((q.qIdx / total) * 100) + '%';
+  document.getElementById('sqSentence').innerHTML = blankWord(entry.quote_en, entry.word);
+
+  const pool = [...S.starred].filter(w => w !== entry.word);
+  const starredDistractors = shuffle(pool).slice(0, 3);
+  const needed = 3 - starredDistractors.length;
+  let extra = [];
+  if (needed > 0) {
+    extra = shuffle(VOCAB.map(v => v.word).filter(w => w !== entry.word && !S.starred.has(w))).slice(0, needed);
+  }
+  const choices = shuffle([entry.word, ...starredDistractors, ...extra].slice(0, 4));
+
+  const labels = ['A', 'B', 'C', 'D'];
+  const container = document.getElementById('sqChoices');
+  container.innerHTML = '';
+  choices.forEach((word, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'choice-btn';
+    btn.innerHTML = '<span class="choice-label">' + labels[i] + '</span>' + word;
+    btn.dataset.word = word;
+    btn.addEventListener('click', () => checkSQAnswer(word, entry.word, entry.def_en));
+    container.appendChild(btn);
+  });
+
+  const fb = document.getElementById('sqFeedback');
+  fb.style.display = 'none';
+  fb.className = 'quiz-feedback';
+  document.getElementById('sqNextBtn').style.display = 'none';
+  q.answered = false;
+}
+
+function checkSQAnswer(chosen, correct, defHint) {
+  if (S.sqQuiz.answered) return;
+  S.sqQuiz.answered = true;
+
+  document.querySelectorAll('#sqChoices .choice-btn').forEach(btn => {
+    btn.disabled = true;
+    if (btn.dataset.word === correct) btn.classList.add('correct');
+    else if (btn.dataset.word === chosen && chosen !== correct) btn.classList.add('wrong');
+  });
+
+  const fb = document.getElementById('sqFeedback');
+  if (chosen === correct) {
+    S.sqQuiz.score++;
+    fb.className = 'quiz-feedback correct-fb';
+    fb.textContent = '✓ Correct! "' + correct + '" — ' + defHint.split(';')[0] + '.';
+  } else {
+    fb.className = 'quiz-feedback wrong-fb';
+    fb.textContent = '✗ The answer is "' + correct + '" — ' + defHint.split(';')[0] + '.';
+  }
+  fb.style.display = 'block';
+
+  const nextBtn = document.getElementById('sqNextBtn');
+  const isLast = S.sqQuiz.qIdx === S.sqQuiz.questions.length - 1;
+  nextBtn.textContent = isLast ? 'See Results →' : 'Next →';
+  nextBtn.style.display = 'inline-block';
+}
+
+function sqNext() {
+  const q = S.sqQuiz;
+  if (q.qIdx < q.questions.length - 1) {
+    q.qIdx++;
+    renderSQQuestion();
+  } else {
+    const total = q.questions.length;
+    const pct = Math.round((q.score / total) * 100);
+    const emoji = pct >= 80 ? '🎉' : pct >= 60 ? '👍' : '📚';
+    document.getElementById('sqQuestionArea').style.display = 'none';
+    document.getElementById('sqResult').style.display = 'block';
+    document.getElementById('sqProgressFill').style.width = '100%';
+    document.getElementById('sqResultScore').textContent = emoji + ' ' + q.score + ' / ' + total;
+    document.getElementById('sqResultLabel').textContent =
+      pct >= 80 ? 'Excellent — your starred words are solid!' :
+      pct >= 60 ? 'Good progress. Review the ones you missed.' :
+                  'Keep studying — revisit your starred words.';
+  }
+}
+
+function goGroup(idx) {
+  S.gIdx = Math.max(0, Math.min(NUM_GROUPS - 1, idx));
+  S.wIdx = 0;
+  S.sentTab = 0;
+  resetQuizUI();
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goWord(idx) {
+  const group = GROUPS[S.gIdx];
+  S.wIdx = Math.max(0, Math.min(group.length - 1, idx));
+  S.sentTab = 0;
+  render();
+}
+
+function navigateToWord(vocabIdx) {
+  let cumulative = 0;
+  for (let g = 0; g < NUM_GROUPS; g++) {
+    if (vocabIdx < cumulative + GROUPS[g].length) {
+      S.gIdx = g;
+      S.wIdx = vocabIdx - cumulative;
+      S.sentTab = 0;
+      resetQuizUI();
+      render();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    cumulative += GROUPS[g].length;
+  }
+}
+
+function toggleStar() {
+  const word = GROUPS[S.gIdx][S.wIdx].word;
+  if (S.starred.has(word)) {
+    S.starred.delete(word);
+    toast('Removed from starred', '');
+  } else {
+    S.starred.add(word);
+    toast('⭐ Starred: ' + word, 'gold');
+  }
+  saveStarred();
+  render();
+}
+
+function resetQuizUI() {
+  S.quiz = null;
+  document.getElementById('quizBody').classList.remove('open');
+  document.getElementById('quizToggleIcon').classList.remove('open');
+  document.getElementById('quizStartArea').style.display = 'block';
+  document.getElementById('quizQuestionArea').style.display = 'none';
+  document.getElementById('quizResult').style.display = 'none';
+}
+
+function startQuiz() {
+  const group = GROUPS[S.gIdx];
+  const questions = shuffle(group.map((entry, i) => ({ entry, groupIdx: i })));
+  S.quiz = {
+    questions,
+    qIdx: 0,
+    phase: 1,
+    score: 0,
+    spellScore: 0,
+    answered: false,
+  };
+  document.getElementById('quizStartArea').style.display = 'none';
+  document.getElementById('quizQuestionArea').style.display = 'block';
+  document.getElementById('quizResult').style.display = 'none';
+  renderQuestion();
+}
+
+function renderQuestion() {
+  if (!GROUPS.length || !S.quiz || !S.quiz.questions) {
+    console.error('No data available');
+    return;
+  }
+  const q = S.quiz;
+  const { entry } = q.questions[q.qIdx];
+  const total = q.questions.length;
+  const step = q.qIdx * 2 + (q.phase - 1);
+  const totalSteps = total * 2;
+
+  document.getElementById('quizQNum').textContent =
+    'Word ' + (q.qIdx + 1) + ' / ' + total + ' · ' + (q.phase === 1 ? 'Part 1: Choose' : 'Part 2: Spell');
+  document.getElementById('quizProgressFill').style.width = ((step / totalSteps) * 100) + '%';
+
+  document.getElementById('quizNextBtn').style.display = 'none';
+
+  if (q.phase === 1) {
+    document.getElementById('quizPhase1').style.display = 'block';
+    document.getElementById('quizPhase2').style.display = 'none';
+
+    document.getElementById('quizSentence').innerHTML = entry.word;
+    // Clear previous prompt and add new one
+    const parent = document.getElementById('quizSentence').parentNode;
+    // Remove previous hint if exists
+    const prevHint = parent.querySelector('.quiz-phrase-hint');
+    if (prevHint) prevHint.remove();
+    
+    const quizHintDiv = document.createElement('div');
+    quizHintDiv.className = 'quiz-phrase-hint';
+    quizHintDiv.style.cssText = 'font-size: 0.95rem; color: var(--muted); margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--s20); line-height: 1.5;';
+    quizHintDiv.innerHTML = 'Pick the correct English definition:';
+    parent.appendChild(quizHintDiv);
+    
+    const group = GROUPS[S.gIdx];
+    const distractors = shuffle(group.filter(w => w.word !== entry.word).map(w => w.def_en)).slice(0, 3);
+    const choices = shuffle([entry.def_en, ...distractors]);
+    const labels = ['A', 'B', 'C', 'D'];
+    const container = document.getElementById('quizChoices');
+    container.innerHTML = '';
+    choices.forEach((def, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'choice-btn';
+      btn.innerHTML = '<span class="choice-label">' + labels[i] + '</span>' + def;
+      btn.dataset.word = def;
+      btn.addEventListener('click', () => checkAnswer(def, entry.def_en));
+      container.appendChild(btn);
+    });
+
+    const fb = document.getElementById('quizFeedback');
+    fb.style.display = 'none';
+    fb.className = 'quiz-feedback';
+    q.answered = false;
+
+  } else {
+    document.getElementById('quizPhase1').style.display = 'none';
+    document.getElementById('quizPhase2').style.display = 'block';
+    renderQuizSpell(entry);
+  }
+}
+
+function renderQuizSpell(entry) {
+  if (!entry || !GROUPS.length) return;
+  // Show definition and answer boxes
+  document.getElementById('qSpellSentence').innerHTML = '<strong>Definition:</strong> ' + entry.def_en;
+
+  // Extract the answer based on entry format
+  const word = extractAnswer(entry.word).replace(/-/g, '');
+  
+  const boxes = document.getElementById('qSpellBoxes');
+  boxes.innerHTML = '';
+  for (let i = 0; i < word.length; i++) {
+    const b = document.createElement('div');
+    b.className = 'spell-box' + (i === 0 ? ' cursor' : '');
+    b.dataset.idx = i;
+    boxes.appendChild(b);
+  }
+  
+  const inp = document.getElementById('qSpellInput');
+  inp.value = '';
+  inp.placeholder = word.length + ' letters';
+  
+  const fb = document.getElementById('qSpellFeedback');
+  fb.style.display = 'none';
+  fb.className = 'quiz-feedback';
+  document.getElementById('qSpellRevealBtn').style.display = 'none';
+  updateQSpellBoxes('');
+}
+
+function updateQSpellBoxes(typed) {
+  if (!GROUPS.length || !S.quiz || !S.quiz.questions || S.quiz.qIdx === undefined) return;
+  const entry = S.quiz.questions[S.quiz.qIdx].entry;
+  const word = extractAnswer(entry.word).replace(/-/g, '');
+  const boxes = document.querySelectorAll('#qSpellBoxes .spell-box');
+  
+  for (let i = 0; i < boxes.length; i++) {
+    if (i < typed.length) {
+      boxes[i].textContent = typed[i];
+      boxes[i].classList.add('filled');
+    } else {
+      boxes[i].textContent = '';
+      boxes[i].classList.remove('filled');
+    }
+  }
+  
+  const firstEmpty = Array.from(boxes).findIndex(b => !b.textContent);
+  document.querySelectorAll('#qSpellBoxes .spell-box').forEach(b => b.classList.remove('cursor'));
+  if (firstEmpty >= 0) {
+    boxes[firstEmpty].classList.add('cursor');
+  }
+}
+
+function checkQuizSpelling() {
+  if (!GROUPS.length || !S.quiz || !S.quiz.questions || S.quiz.qIdx === undefined) return;
+  const typed = document.getElementById('qSpellInput').value.trim();
+  if (!typed) return;
+  
+  const entry = S.quiz.questions[S.quiz.qIdx].entry;
+  const word = extractAnswer(entry.word).replace(/-/g, '');
+  
+  // Normalize both strings for comparison (remove all whitespace, handle invisible chars)
+  const typedNorm = typed.replace(/\s+/g, '').trim();
+  const wordNorm = word.replace(/\s+/g, '').trim();
+  
+  const fb = document.getElementById('qSpellFeedback');
+  
+  if (typedNorm === wordNorm) {
+    fb.innerHTML = '✅ Correct!';
+    fb.className = 'quiz-feedback correct-fb';
+    S.quiz.answered = true;
+  } else {
+    fb.innerHTML = '❌ Not quite. The answer is: <strong>' + word + '</strong>';
+    fb.className = 'quiz-feedback wrong-fb';
+  }
+  fb.style.display = 'block';
+  
+  // Hide reveal button and show Next Word button
+  document.getElementById('qSpellRevealBtn').style.display = 'none';
+  
+  if (S.quiz && S.quiz.questions && S.quiz.qIdx !== undefined) {
+    const isLast = S.quiz.qIdx === S.quiz.questions.length - 1;
+    const nextBtn = document.getElementById('quizNextBtn');
+    nextBtn.textContent = isLast ? 'See Results →' : 'Next Word →';
+    nextBtn.style.display = 'inline-block';
+  }
+}
+
+function checkAnswer(chosen, correct) {
+  if (S.quiz.answered) return;
+  S.quiz.answered = true;
+
+  const btns = document.querySelectorAll('.choice-btn');
+  btns.forEach(btn => {
+    btn.disabled = true;
+    if (btn.dataset.word === correct) btn.classList.add('correct');
+    else if (btn.dataset.word === chosen && chosen !== correct) btn.classList.add('wrong');
+  });
+
+  const fb = document.getElementById('quizFeedback');
+  if (chosen === correct) {
+    S.quiz.score++;
+    fb.className = 'quiz-feedback correct-fb';
+    fb.textContent = '✓ Correct! "' + correct + '" is right.';
+  } else {
+    // Auto-star word on wrong answer
+    S.starred.add(correct);
+    saveStarred();
+    fb.className = 'quiz-feedback wrong-fb';
+    fb.textContent = '✗ The answer is "' + correct + '".';
+  }
+  fb.style.display = 'block';
+
+  const nextBtn = document.getElementById('quizNextBtn');
+  nextBtn.textContent = 'Next: Spell It →';
+  nextBtn.style.display = 'inline-block';
+}
+
+function quizNext() {
+  const q = S.quiz;
+  const total = q.questions.length;
+  if (q.phase === 1) {
+    q.phase = 2;
+    renderQuestion();
+  } else if (q.qIdx < total - 1) {
+    q.qIdx++;
+    q.phase = 1;
+    renderQuestion();
+  } else {
+    const mcPct = Math.round((q.score / total) * 100);
+    const spPct = Math.round((q.spellScore / total) * 100);
+    const combined = q.score + q.spellScore;
+    const combMax = total * 2;
+    const emoji = mcPct >= 80 ? '🎉' : mcPct >= 60 ? '👍' : '📚';
+    document.getElementById('quizQuestionArea').style.display = 'none';
+    document.getElementById('quizResult').style.display = 'block';
+    document.getElementById('quizProgressFill').style.width = '100%';
+    document.getElementById('quizResultScore').textContent = emoji + ' ' + combined + ' / ' + combMax;
+    document.getElementById('quizResultLabel').textContent =
+      '📖 Choose: ' + q.score + '/' + total + '  ·  ✏️ Spell: ' + q.spellScore + '/' + total + (
+        mcPct >= 80 && spPct >= 80 ? '  —  Outstanding!' :
+        mcPct >= 60 ? '  —  Good work! Review the ones you missed.' :
+        '  —  Keep studying — you\'ll get there!'
+      );
+    S.quizDone[S.gIdx] = { score: combined, total: combMax };
+    render();
+  }
+}
+
+
+
+function updateBoxes(typed) {
+  const entry = GROUPS[S.gIdx][S.wIdx];
+  const word = entry.word.toLowerCase().replace(/-/g, '');
+  const t = typed.toLowerCase();
+  const allBoxes = document.querySelectorAll('.spell-box');
+
+  allBoxes.forEach((b, i) => {
+    b.className = 'spell-box';
+    if (i < t.length) {
+      b.textContent = t[i];
+      b.classList.add('filled');
+    } else {
+      b.textContent = '';
+      if (i === t.length) b.classList.add('cursor');
+    }
+  });
+}
+
+function checkSpelling() {
+  const entry = GROUPS[S.gIdx][S.wIdx];
+  const word = entry.word.toLowerCase();
+  const typed = document.getElementById('spellInput').value.trim().toLowerCase();
+  const fb = document.getElementById('spellFeedback');
+
+  if (!typed) { toast('Type the word first!', ''); return; }
+
+  const allBoxes = document.querySelectorAll('.spell-box');
+  const wordClean = word.replace(/-/g, '');
+  const typedClean = typed.replace(/-/g, '');
+
+  if (typedClean === wordClean) {
+    allBoxes.forEach(b => { b.className = 'spell-box correct'; b.textContent = b.textContent || ''; });
+    fb.className = 'spell-feedback ok';
+    fb.textContent = '✓ Correct! You spelled "' + entry.word + '" perfectly.';
+    toast('✓ Spelled correctly!', 'good');
+  } else {
+    const wordArr = wordClean.split('');
+    allBoxes.forEach((b, i) => {
+      b.className = 'spell-box';
+      const ch = typedClean[i] || '';
+      b.textContent = ch || wordArr[i];
+      if (!ch)          b.classList.add('wrong');
+      else if (ch === wordArr[i]) b.classList.add('correct');
+      else              { b.classList.add('wrong'); b.textContent = ch; }
+    });
+    fb.className = 'spell-feedback err';
+    fb.textContent = '✗ Not quite. The word is "' + word + '".';
+  }
+  fb.style.display = 'block';
+  document.getElementById('spellRevealBtn').style.display = 'none';
+}
+
+document.getElementById('prevGroupBtn').addEventListener('click', () => goGroup(S.gIdx - 1));
+document.getElementById('nextGroupBtn').addEventListener('click', () => goGroup(S.gIdx + 1));
+document.getElementById('prevWordBtn').addEventListener('click', () => goWord(S.wIdx - 1));
+document.getElementById('nextWordBtn').addEventListener('click', () => goWord(S.wIdx + 1));
+document.getElementById('starBtn').addEventListener('click', toggleStar);
+  document.getElementById('speakBtn').addEventListener('click', () => speak(GROUPS[S.gIdx][S.wIdx].word));
+  const sentenceBtn = document.getElementById('sentenceHearBtn');
+  if (sentenceBtn) {
+    sentenceBtn.addEventListener('click', () => {
+      const sentEn = document.getElementById('sentEn');
+      if (sentEn) {
+        let text = sentEn.textContent;
+        if (text && text !== '—') {
+          text = text.replace(/<[^>]*>/g, '');
+          if (text.trim()) speak(text);
+        }
+      }
+    });
+  }
+document.getElementById('speakBtn2').addEventListener('click', () => speak(GROUPS[S.gIdx][S.wIdx].word));
+document.getElementById('tabNovel').addEventListener('click', () => { S.sentTab = 0; render(); });
+document.getElementById('tabAI').addEventListener('click',   () => { S.sentTab = 1; render(); });
+const tabFlashcard = document.getElementById('tabFlashcard');
+if (tabFlashcard) tabFlashcard.addEventListener('click', () => { S.sentTab = 2; flashcardState.index = 0; render(); if (document.getElementById('flashcardContainer')) renderFlashcard(); });
+document.getElementById('mySentSaveBtn').addEventListener('click', addSentence);
+document.getElementById('mySentInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') { e.preventDefault(); addSentence(); }
+});
+document.getElementById('sqStartBtn').addEventListener('click', startStarredQuiz);
+document.getElementById('sqNextBtn').addEventListener('click', sqNext);
+document.getElementById('sqRetryBtn').addEventListener('click', startStarredQuiz);
+document.getElementById('sqResetBtn').addEventListener('click', renderStarredQuizStart);
+document.getElementById('quizHeader').addEventListener('click', () => {
+  const body = document.getElementById('quizBody');
+  const icon = document.getElementById('quizToggleIcon');
+  const open = body.classList.toggle('open');
+  icon.classList.toggle('open', open);
+});
+document.getElementById('quizStartBtn').addEventListener('click', startQuiz);
+document.getElementById('quizSkipBtn').addEventListener('click', () => {
+  document.getElementById('quizBody').classList.remove('open');
+  document.getElementById('quizToggleIcon').classList.remove('open');
+});
+document.getElementById('qSpellInput').addEventListener('input', e => {
+  updateQSpellBoxes(e.target.value);
+});
+document.getElementById('qSpellInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') { e.preventDefault(); checkQuizSpelling(); }
+});
+document.getElementById('qSpellCheckBtn').addEventListener('click', checkQuizSpelling);
+
+document.getElementById('quizNextBtn').addEventListener('click', quizNext);
+document.getElementById('quizRetryBtn').addEventListener('click', () => {
+  document.getElementById('quizResult').style.display = 'none';
+  document.getElementById('quizStartArea').style.display = 'block';
+});
+document.getElementById('quizCloseBtn').addEventListener('click', () => {
+  document.getElementById('quizBody').classList.remove('open');
+  document.getElementById('quizToggleIcon').classList.remove('open');
+});
+document.getElementById('starredHeader').addEventListener('click', () => {
+  const body = document.getElementById('starredBody');
+  const icon = document.getElementById('starredToggleIcon');
+  const open = body.classList.toggle('open');
+  icon.classList.toggle('open', open);
+});
+document.getElementById('starredToggleBtn').addEventListener('click', () => {
+  const body = document.getElementById('starredBody');
+  const icon = document.getElementById('starredToggleIcon');
+  body.classList.add('open');
+  icon.classList.add('open');
+  document.getElementById('starredSection').scrollIntoView({ behavior: 'smooth' });
+});
+// [Spell listener removed - Spell tab replaced with Flashcard]
+// [Spell listener removed - Spell tab replaced with Flashcard]
+// // [Spell listener removed - Spell tab replaced with Flashcard] /* REMOVED - Spell tab no longer exists */
+const flashPrevBtn = document.getElementById('flashPrevBtn');
+if (flashPrevBtn) flashPrevBtn.addEventListener('click', flashcardPrev);
+const flashNextBtn = document.getElementById('flashNextBtn');
+if (flashNextBtn) flashNextBtn.addEventListener('click', flashcardNext);
+const flashStarBtn = document.getElementById('flashStarBtn');
+if (flashStarBtn) flashStarBtn.addEventListener('click', toggleFlashcardStar);
+// // [Spell listener removed - Spell tab replaced with Flashcard]
+document.addEventListener('keydown', e => {
+  const tag = document.activeElement.tagName;
+  if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+  switch(e.key) {
+    case 'ArrowRight': e.preventDefault(); goWord(S.wIdx + 1); break;
+    case 'ArrowLeft':  e.preventDefault(); goWord(S.wIdx - 1); break;
+    case 'ArrowUp':    e.preventDefault(); goGroup(S.gIdx - 1); break;
+    case 'ArrowDown':  e.preventDefault(); goGroup(S.gIdx + 1); break;
+    case 's': case 'S': toggleStar(); break;
+    case 'p': case 'P': speak(GROUPS[S.gIdx][S.wIdx].word); break;
+    case '1': S.sentTab = 0; render(); break;
+    case '2': S.sentTab = 1; render(); break;
+  }
+});
+
+// ── Print functions ──────────────────────────────────────────
+function openPrintModal() {
+  const grp = GROUPS[S.gIdx];
+  document.getElementById('printGroupLabel').textContent = 'Group ' + (S.gIdx + 1);
+  document.getElementById('printGroupCount').textContent = grp.length;
+  document.getElementById('printAllCount').textContent = VOCAB.length;
+  document.getElementById('printModal').style.display = 'block';
+}
+
+function closePrintModal() {
+  document.getElementById('printModal').style.display = 'none';
+}
+
+function doPrint() {
+  const scope = document.querySelector('input[name="printScope"]:checked').value;
+  const words = scope === 'group' ? GROUPS[S.gIdx] : VOCAB;
+  const groupLabel = scope === 'group' ? 'Group ' + (S.gIdx + 1) : 'All Words';
+
+  const rows = words.map((entry, i) => {
+    const sa = SYNAN[entry.word] || { syn: [], ant: [] };
+    const synText = sa.syn.length ? sa.syn.join(', ') : '—';
+    const antText = sa.ant.length ? sa.ant.join(', ') : '—';
+    return `
+      <div class="pe">
+        <div class="pe-head">
+          <span class="pe-num">${i + 1}</span>
+          <span class="pe-word">${entry.word}</span>
+          <span class="pe-pron">${entry.pron}</span>
+          <span class="pe-ch">${entry.chapter}</span>
+        </div>
+        <div class="pe-def">${entry.def_en}</div>
+        <div class="pe-def zh">${entry.def_zh}</div>
+        <div class="pe-synan">
+          <span class="pe-label syn">SYN</span>${synText}
+          &nbsp;&nbsp;<span class="pe-label ant">ANT</span>${antText}
+        </div>
+        <div class="pe-sent">
+          <span class="pe-sent-label">📖</span>
+          <span>${entry.quote_en}</span>
+        </div>
+        <div class="pe-sent zh">
+          <span class="pe-sent-label"></span>
+          <span>${entry.quote_zh}</span>
+        </div>
+        <div class="pe-sent ex">
+          <span class="pe-sent-label">💡</span>
+          <span>${entry.ex_en}</span>
+        </div>
+        <div class="pe-sent zh">
+          <span class="pe-sent-label"></span>
+          <span>${entry.ex_zh}</span>
+        </div>
+      </div>`;
+  }).join('');
+
+  const html = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>${BOOK_CONFIG.bookName} — Vocabulary (${groupLabel})</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Georgia, 'Songti SC', 'SimSun', serif;
+    font-size: 9.5pt;
+    color: #111;
+    background: white;
+    padding: 14mm 12mm;
+  }
+  h1 {
+    font-size: 15pt;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3pt;
+    letter-spacing: .02em;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 9pt;
+    color: #555;
+    margin-bottom: 12pt;
+    padding-bottom: 8pt;
+    border-bottom: 1.5pt solid #333;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 14pt;
+  }
+  .pe {
+    border-bottom: .5pt solid #ccc;
+    padding: 7pt 0 6pt;
+    break-inside: avoid;
+  }
+  .pe-head {
+    display: flex;
+    align-items: baseline;
+    gap: 5pt;
+    margin-bottom: 2pt;
+    flex-wrap: wrap;
+  }
+  .pe-num {
+    font-size: 7.5pt;
+    color: #888;
+    min-width: 16pt;
+  }
+  .pe-word {
+    font-size: 12pt;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: .01em;
+  }
+  .pe-pron {
+    font-size: 8pt;
+    color: #555;
+    font-style: italic;
+  }
+  .pe-ch {
+    font-size: 7.5pt;
+    color: #888;
+    margin-left: auto;
+  }
+  .pe-def {
+    font-size: 8.5pt;
+    color: #222;
+    margin-bottom: 1.5pt;
+    line-height: 1.4;
+  }
+  .pe-def.zh {
+    color: #444;
+    font-size: 8pt;
+    margin-bottom: 3pt;
+  }
+  .pe-synan {
+    font-size: 8pt;
+    margin-bottom: 3.5pt;
+    color: #333;
+    line-height: 1.5;
+  }
+  .pe-label {
+    font-size: 7pt;
+    font-weight: 700;
+    padding: 1pt 4pt;
+    border-radius: 3pt;
+    margin-right: 3pt;
+    letter-spacing: .04em;
+  }
+  .pe-label.syn {
+    background: #e6faf4;
+    color: #1a7a55;
+    border: .5pt solid #aadec8;
+  }
+  .pe-label.ant {
+    background: #fef0f2;
+    color: #a02040;
+    border: .5pt solid #f0b0bc;
+  }
+  .pe-sent {
+    font-size: 8pt;
+    line-height: 1.45;
+    color: #333;
+    display: flex;
+    gap: 4pt;
+    margin-top: 1.5pt;
+  }
+  .pe-sent.ex { color: #1a4a70; }
+  .pe-sent.zh { color: #555; margin-top: 1pt; }
+  .pe-sent-label {
+    font-size: 8pt;
+    min-width: 12pt;
+    flex-shrink: 0;
+  }
+  .footer {
+    position: running(footer);
+    font-size: 7.5pt;
+    color: #888;
+    text-align: center;
+  }
+  @page {
+    margin: 14mm 12mm 18mm;
+    @bottom-center { content: element(footer); }
+  }
+  @media print {
+    .footer { display: block; }
+  }
+</style>
+</head>
+<body>
+<h1>${BOOK_CONFIG.bookName} Vocabulary</h1>
+<div class="subtitle">${BOOK_CONFIG.author} &nbsp;·&nbsp; ${groupLabel} &nbsp;·&nbsp; ${words.length} words &nbsp;·&nbsp; 📖 Novel sentence &nbsp; 💡 AI example sentence</div>
+<div class="footer">${BOOK_CONFIG.bookName} — ${BOOK_CONFIG.author} &nbsp;|&nbsp; ${groupLabel}</div>
+<div class="grid">${rows}</div>
+</body>
+</html>`;
+
+  closePrintModal();
+  const win = window.open('', '_blank');
+  win.document.write(html);
+  win.document.close();
+  win.focus();
+  setTimeout(() => win.print(), 400);
+}
+
+
+let flashcardState = { side: 'word', index: 0 };
+
+function speakFlashcard() {
+  const group = GROUPS[S.gIdx];
+  const word = group[flashcardState.index].word;
+  speak(word);
+}
+
+
+
+function toggleFlashcard() {
+  const inner = document.getElementById('flashInner');
+  const label = document.getElementById('flashLabel');
+  const content = document.getElementById('flashContent');
+  
+  const group = GROUPS[S.gIdx];
+  const entry = group[flashcardState.index];
+  
+  if (flashcardState.side === 'word') {
+    flashcardState.side = 'def-en';
+    label.textContent = 'English Definition';
+    const pos = entry.part_of_speech || entry.pos || 'word';
+    content.innerHTML = '<span class="flashcard-pos">[' + pos + ']</span>' + entry.def_en;
+    content.className = 'flashcard-content flashcard-def-en';
+    inner.style.background = 'linear-gradient(160deg, rgba(26,74,112,.85), rgba(14,34,48,.95))';
+  } else if (flashcardState.side === 'def-en') {
+    flashcardState.side = 'def-zh';
+    label.textContent = 'Chinese Definition';
+    const pos2 = entry.part_of_speech || entry.pos || 'word';
+    content.innerHTML = '<span class="flashcard-pos">[' + pos2 + ']</span>' + entry.def_zh;
+    content.className = 'flashcard-content flashcard-def-zh';
+    inner.style.background = 'linear-gradient(160deg, rgba(50,34,90,.85), rgba(30,20,50,.95))';
+  } else {
+    flashcardState.side = 'word';
+    label.textContent = 'Word';
+    content.innerHTML = '<div class="flashcard-word-main">' + entry.word + '</div>' + '<div class="flashcard-pron">[' + (entry.pron || '') + ']</div>' + '<div class="flashcard-pos-display">[' + (entry.part_of_speech || '') + ']</div>' + '<button class="flashcard-hear" onclick="speakFlashcard()" data-word="' + entry.word.replace(/'/g, "\\'") + '">🔊 Hear</button>';
+    content.className = 'flashcard-content';
+    inner.style.background = 'linear-gradient(160deg, rgba(14,34,48,.85), rgba(11,27,36,.95))';
+  }
+}
+
+function renderFlashcard() {
+  const container = document.getElementById('flashcardContainer');
+  if (!container) return; // Exit if flashcard container doesn't exist
+  
+  const group = GROUPS[S.gIdx];
+  const entry = group[flashcardState.index];
+  const isStarred = S.starred.has(entry.word);
+  
+  flashcardState.side = 'word';
+  
+  const inner = document.getElementById('flashInner');
+  const label = document.getElementById('flashLabel');
+  const content = document.getElementById('flashContent');
+  
+  label.textContent = 'Word';
+  content.innerHTML = '<div class="flashcard-word-main">' + entry.word + '</div><div class="flashcard-pron">[' + (entry.pron || '') + ']</div><span class="badge badge-pos">[' + (entry.part_of_speech || '') + ']</span><button class="flashcard-hear" id="flashHearBtn" onclick="speakFlashcard()">🔊 Hear</button>';
+  content.className = 'flashcard-content';
+  inner.style.background = 'linear-gradient(160deg, rgba(14,34,48,.85), rgba(11,27,36,.95))';
+  
+  document.getElementById('flashProgress').textContent = (flashcardState.index + 1) + ' / ' + group.length;
+  document.getElementById('flashPrevBtn').disabled = flashcardState.index === 0;
+  document.getElementById('flashNextBtn').disabled = flashcardState.index === group.length - 1;
+  
+  const starBtn = document.getElementById('flashStarBtn');
+  starBtn.textContent = isStarred ? '⭐' : '☆';
+  starBtn.classList.toggle('starred', isStarred);
+}
+
+function flashcardPrev() {
+  if (flashcardState.index > 0) {
+    flashcardState.index--;
+    renderFlashcard();
+  }
+}
+
+function flashcardNext() {
+  const group = GROUPS[S.gIdx];
+  if (flashcardState.index < group.length - 1) {
+    flashcardState.index++;
+    renderFlashcard();
+  }
+}
+
+function toggleFlashcardStar() {
+  const group = GROUPS[S.gIdx];
+  const word = group[flashcardState.index].word;
+  if (S.starred.has(word)) {
+    S.starred.delete(word);
+  } else {
+    S.starred.add(word);
+  }
+  saveStarred();
+  renderFlashcard();
+}
+
+
+// Initialize
+if (VOCAB.length > 1) {
+  render();
+} else {
+  document.getElementById('wordDisplay').textContent = 'Add Data';
+  document.getElementById('defEn').textContent = 'Please paste your 100 vocabulary words into the VOCAB array.';
+}
+</script>
+
+<!-- Print Modal -->
+<div id="printModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.75); z-index:9999; overflow-y:auto; padding:20px;">
+  <div style="max-width:520px; margin:0 auto; background:var(--panel); border:1px solid var(--s35); border-radius:16px; padding:28px 24px;">
+    <h2 style="font-family:Georgia,serif; color:var(--good); margin-bottom:6px; font-size:1.3rem;">🖨️ Print Vocabulary</h2>
+    <p style="color:var(--muted); font-size:.85rem; margin-bottom:20px;">Each entry includes word, pronunciation, definitions, synonyms &amp; antonyms, and both sentences.</p>
+    <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:22px;">
+      <label style="display:flex; align-items:center; gap:10px; cursor:pointer; color:var(--text); font-weight:600; font-size:.95rem;">
+        <input type="radio" name="printScope" value="group" checked style="accent-color:var(--good); width:16px; height:16px;">
+        Current group only (<span id="printGroupLabel">Group 1</span> · <span id="printGroupCount">10</span> words)
+      </label>
+      <label style="display:flex; align-items:center; gap:10px; cursor:pointer; color:var(--text); font-weight:600; font-size:.95rem;">
+        <input type="radio" name="printScope" value="all" style="accent-color:var(--good); width:16px; height:16px;">
+        All words (<span id="printAllCount">100</span> words)
+      </label>
+    </div>
+    <div style="display:flex; gap:10px;">
+      <button onclick="doPrint()" style="flex:1; background:var(--good); color:#06131a; border:none; border-radius:10px; padding:11px; font-weight:800; font-size:.95rem; cursor:pointer;">Print / Save PDF</button>
+      <button onclick="closePrintModal()" style="flex:1; background:var(--panel2); color:var(--muted); border:1px solid var(--s35); border-radius:10px; padding:11px; font-weight:700; font-size:.95rem; cursor:pointer;">Cancel</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
